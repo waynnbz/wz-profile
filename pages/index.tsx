@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
   return (
     <h1 className=''>
-      Weipeng Zeng
+      Profile Website
     </h1>
   )
 }
