@@ -1,20 +1,21 @@
 import React from 'react';
 import { useTheme } from '../utils/theme';
-import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
+import { MdDarkMode, MdLightMode } from 'react-icons/md';
 
 function Header() {
   const { isDarkMode, toggleDarkMode } = useTheme();
 
   return (
-    <div>
+    <div className="flex justify-around items-center py-12">
+      <div className='text-2xl'></div>
       <button
-        className="bg-gray-800 text-gray-200 dark:bg-gray-300 dark:text-gray-800 font-medium p-2 rounded-full"
+        className="bg-gray-700 text-gray-100 dark:bg-gray-300 dark:text-gray-800 font-medium p-2 text-xl rounded-full hover:shadow-lg"
         onClick={() => {
           toggleDarkMode();
           localStorage.setItem('dark', JSON.stringify(!isDarkMode));
         }}
       >
-        {isDarkMode ? <MdOutlineLightMode /> : <MdDarkMode />}
+        {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
       </button>
     </div>
   );

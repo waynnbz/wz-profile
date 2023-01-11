@@ -1,6 +1,11 @@
 import { Inter } from '@next/font/google';
 import { useTheme } from '../utils/theme';
 import Header from '../components/Header';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Project from '../components/Project';
+import Contact from '../components/Contact';
+import Skills from '../components/Skills';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -10,19 +15,16 @@ export default function Home() {
   return (
     <div className={`${isDarkMode && 'dark'}`}>
       <div
-        className={`bg-white dark:bg-black transition duration-500 ease-in-out origin-top-right`}
+        className={`text-gray-800 dark:text-gray-200 bg-white dark:bg-black transition duration-500 ease-in-out origin-top-right`}
       >
         <Header />
-        <h1 className="">Wei Peng Zeng</h1>
-        <span>Developer & Data Scientist</span>
-        <nav>
-          <ul>
-            <li>Home</li>
-            <li>Projects</li>
-            <li>Info</li>
-            <li>Contact</li>
-          </ul>
-        </nav>
+        <Hero />
+        <About />
+        <Skills />
+        <Project title='Project #1' description='details here' demoImage='image url' />
+        <Project title='Project #2' description='details here' demoImage='image url' />
+        <Project title='Project #3' description='details here' demoImage='image url' />
+        <Contact />
       </div>
     </div>
   );
