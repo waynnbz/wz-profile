@@ -1,17 +1,18 @@
 import { Inter } from '@next/font/google';
-import { MdDarkMode, MdOutlineLightMode } from 'react-icons/md';
-import { useState } from 'react';
+import { useTheme } from '../utils/theme';
+import Header from '../components/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const { isDarkMode } = useTheme();
 
   return (
-    <div className={`${darkMode && 'dark'}`}>
+    <div className={`${isDarkMode && 'dark'}`}>
       <div
-        className={`bg-white dark:bg-black transition duration-500 ease-in-out origin-top-right scale-100 `}
+        className={`bg-white dark:bg-black transition duration-500 ease-in-out origin-top-right`}
       >
+        <Header />
         <h1 className="">Wei Peng Zeng</h1>
         <span>Developer & Data Scientist</span>
         <nav>
