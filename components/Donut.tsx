@@ -1,14 +1,14 @@
 import { useSpring, animated } from '@react-spring/web';
 
 export default function donut() {
-  const [springs, api] = useSpring(() => ({
-    from: { x: 0 },
-    to: { x: 1 },
-  }));
+  // const [springs, api] = useSpring(() => ({
+  //   from: { x: 0 },
+  //   to: { x: 1 },
+  // }));
 
   return (
     <div className="flex h-screen justify-star items-center bg-slate-600  ">
-      <animated.div
+      {/* <animated.div
         className="w-56 h-56 bg-red-400 rounded-3xl"
         style={{ ...springs }}
         onMouseEnter={() => {
@@ -36,7 +36,7 @@ export default function donut() {
           background: '#ff6d6d',
           borderRadius: 8,
         }}
-      /> */}
+      /> */} 
     </div>
   );
 }
