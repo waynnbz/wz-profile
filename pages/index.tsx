@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className={`${isDarkMode && 'dark'}`}>
       <div
-        className={`text-gray-800 dark:text-gray-200 bg-white dark:bg-black transition duration-500 ease-in-out origin-top-right`}
+        className={`text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 transition duration-500 ease-in-out origin-top-right`}
       >
         <Header />
         <Hero />
