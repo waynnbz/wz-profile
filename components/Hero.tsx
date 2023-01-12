@@ -33,16 +33,16 @@ function Hero() {
   });
 
   const reset = useCallback(() => {
-    const greetings = ["Hi, I'm Waynn.", 'React Native &', 'Web Developer'];
+    const greetings = ["Hi, I'm Waynn.", 'Product Ops &', 'Web Developer'];
 
     ref.current.forEach(clearTimeout);
     ref.current = [];
     setItems([]);
-    ref.current.push(setTimeout(() => setItems(greetings), 1000));
+    ref.current.push(setTimeout(() => setItems(greetings), 2000));
     ref.current.push(
-      setTimeout(() => setItems([greetings[0], greetings[2]]), 4000),
+      setTimeout(() => setItems([greetings[0], greetings[2]]), 5000),
     );
-    ref.current.push(setTimeout(() => setItems(greetings), 7000));
+    ref.current.push(setTimeout(() => setItems([greetings[0], 'React Native &', greetings[2]]), 8000));
   }, []);
 
   useEffect(() => {
@@ -57,7 +57,7 @@ function Hero() {
           <animated.div style={rest} onClick={reset}>
             <animated.div
               className="cursor-pointer"
-              style={{ overflow: '', height: innerHeight }}
+              style={{ overflow: 'hidden', height: innerHeight }}
             >
               {item}
             </animated.div>
