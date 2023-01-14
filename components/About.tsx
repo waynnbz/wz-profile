@@ -2,10 +2,10 @@ import React from 'react';
 
 function About() {
   return (
-    <div className="flex flex-col gap-12 lg:grid lg:grid-cols-3 -mt-64 px-24 lg:px-48 items-center text-left py-44">
+    <div className="flex flex-col gap-12 lg:grid lg:grid-cols-3 px-24 lg:px-48 items-center text-left py-44 bg-red-500">
       <div className="col-span-2">
         <div className="text-4xl mb-10">About me</div>
-        <div className='flex flex-col gap-8 text-2xl'>
+        <div className="flex flex-col gap-8 text-2xl">
           <span>
             Two years working in Web/Mobile Development and Product Ops. I am
             comfortable with Agile/Scrum development and CI/CD workflow. While I
@@ -13,7 +13,8 @@ function About() {
             business logic and strive to deliver real-world solutions.
           </span>
           <span>
-            I am currently looking for a Singapore-based developer role. Hire me?
+            I am currently looking for a Singapore-based developer role. Hire
+            me?
           </span>
         </div>
       </div>
