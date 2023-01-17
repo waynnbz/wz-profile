@@ -8,16 +8,16 @@ function Header() {
   const router = useRouter();
 
   return (
-    <div className="flex justify-around items-center py-12">
+    <header className="sticky top-0 flex w-full justify-around items-center bg-slate-500/30 py-4 z-20">
       <div
-        onClick={() => router.push('/')}
-        className="text-xl font-script font-extrabold flex flex-col cursor-pointer hover:opacity-80"
+        onClick={() => router.push('#')}
+        className="text-md leading-4 tracking-wider font-bold flex flex-col cursor-pointer hover:opacity-80"
       >
-        <span>WP</span>
-        <span className="-mt-2">ZENG.</span>
+        <span>__</span>
+        <span>____</span>
       </div>
       <button
-        className="bg-gray-700 text-gray-100 dark:bg-gray-300 dark:text-gray-800 font-medium p-3 text-xl rounded-full hover:shadow-md hover:opacity-80 active:scale-95"
+        className=" bg-gray-700 text-gray-100 dark:bg-gray-300 dark:text-gray-800 font-medium p-2 rounded-full hover:shadow-md hover:opacity-80 active:scale-95"
         onClick={() => {
           toggleDarkMode();
           localStorage.setItem('dark', JSON.stringify(!isDarkMode));
@@ -25,7 +25,7 @@ function Header() {
       >
         {isDarkMode ? <MdLightMode /> : <MdDarkMode />}
       </button>
-    </div>
+    </header>
   );
 }
 

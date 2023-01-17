@@ -28,6 +28,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Dancing+Script"
           rel="stylesheet"
         />
+        <title>WP ZENG</title>
       </Head>
       <body>
         <Main />

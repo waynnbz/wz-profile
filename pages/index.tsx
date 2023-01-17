@@ -3,9 +3,9 @@ import { useTheme } from '../utils/theme';
 import Header from '../components/Header';
 import Hero from '../components/Hero';
 import About from '../components/About';
-import Project from '../components/Project';
 import Contact from '../components/Contact';
 import Skills from '../components/Skills';
+import Projects from '../components/Projects';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,16 +15,29 @@ export default function Home() {
   return (
     <div className={`${isDarkMode && 'dark'}`}>
       <div
-        className={`text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 transition duration-500 ease-in-out origin-top-right`}
+        className={`relative h-screen overflow-scroll snap-y snap-mandatory
+        text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 transition duration-500 ease-in-out`}
       >
         <Header />
-        <Hero />
-        <About />
-        <Skills />
-        <Project title='Project #1' description='details here' demoImage='image url' />
-        <Project title='Project #2' description='details here' demoImage='image url' />
-        <Project title='Project #3' description='details here' demoImage='image url' />
-        <Contact />
+
+        <section id="hero" className="snap-start">
+          <Hero />
+        </section>
+
+        <section id="about" className="snap-center">
+          <About />
+        </section>
+
+        {/* <Skills /> */}
+        {/* Work Experience */}
+
+        <section id="projects" className="snap-center">
+          <Projects />
+        </section>
+
+        <section id="contact" className="snap-end">
+          <Contact />
+        </section>
       </div>
     </div>
   );

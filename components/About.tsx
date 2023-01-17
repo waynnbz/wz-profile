@@ -2,7 +2,10 @@ import React from 'react';
 
 function About() {
   return (
-    <div className="flex flex-col gap-12 lg:grid lg:grid-cols-3 px-24 lg:px-48 items-center text-left py-44 bg-red-500">
+    <div
+      className="flex flex-col h-screen gap-12 items-center justify-center dark:bg-green-800 text-left py-44
+    lg:grid lg:grid-cols-3 px-24 lg:px-48 "
+    >
       <div className="col-span-2">
         <div className="text-4xl mb-10">About me</div>
         <div className="flex flex-col gap-8 text-2xl">
