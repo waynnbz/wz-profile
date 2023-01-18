@@ -8,7 +8,7 @@ function Header() {
   const router = useRouter();
 
   return (
-    <header className="sticky top-0 flex w-full justify-around items-center bg-slate-500/30 py-4 z-20">
+    <header className="sticky top-0 flex w-full justify-around items-center py-5 z-20">
       <div
         onClick={() => router.push('#')}
         className="text-md leading-4 tracking-wider font-bold flex flex-col cursor-pointer hover:opacity-80"

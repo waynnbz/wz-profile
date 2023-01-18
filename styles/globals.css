@@ -9,3 +9,21 @@
     focus:text-[#F7AB0A]/40 hover:border-[#F7AB0A]/40
   }
 }
+
+@font-face {
+  font-family: 'VisueltPro';
+  src: url('../public/fonts/VisueltPro/VisueltPro-Black.woff2') format('woff2'),
+       url('../public/fonts/VisueltPro/VisueltPro-Black.woff') format('woff'),
+       url('../public/fonts/VisueltPro/VisueltPro-Black.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VisueltPro';
+  src: url('../public/fonts/VisueltPro/VisueltPro-Bold.woff2') format('woff2'),
+       url('../public/fonts/VisueltPro/VisueltPro-Bold.woff') format('woff'),
+       url('../public/fonts/VisueltPro/VisueltPro-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}

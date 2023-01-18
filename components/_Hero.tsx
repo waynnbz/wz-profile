@@ -3,18 +3,22 @@ import React from 'react';
 
 function _Hero() {
   return (
-    <div className="snap-y snap-mandatory h-screen overflow-scroll ">
-      <div
-        className=" absolute top-8 left-10 cursor-pointer w-12 h-12 bg-purple-400 rounded-full focus:ring-8"
-        onClick={() => {}}
-      />
-      <div className="snap-end h-screen ">
-        <Image src="/11.jpg" alt="pic 1" width={800} height={80} />
-      </div>
-      <div className="snap-end shrink-0 border border-red-500  h-screen w-[800px] bg-red-500 " />
-      <div className="snap-end shrink-0 border border-red-500  h-screen w-[800px] bg-green-500 " />
-      <div className="snap-end shrink-0 border border-red-500  h-screen w-[800px] bg-purple-500 " />
-      <div className="snap-end shrink-0 border border-red-500  h-screen w-[800px] bg-blue-500 " />
+    // <div className="snap-y snap-mandatory h-screen overflow-scroll ">
+    //   {/* <div
+    //     className=" absolute top-8 left-10 cursor-pointer w-12 h-12 bg-purple-400 rounded-full focus:ring-8"
+    //     onClick={() => {}}
+    //   /> */}
+    //   {/* <div className="snap-end h-screen ">
+    //     <Image src="/11.jpg" alt="pic 1" width={800} height={80} />
+    //   </div> */}
+    //   <div className="snap-end shrink-0 border border-red-500  h-screen w-[800px] bg-red-500 " />
+    //   <div className="snap-end shrink-0 border border-red-500  h-screen w-[800px] bg-green-500 " />
+    //   <div className="snap-end shrink-0 border border-red-500  h-screen w-[800px] bg-purple-500 " />
+    //   <div className="snap-end shrink-0 border border-red-500  h-screen w-[800px] bg-blue-500 " />
+    // </div>
+
+    <div className='bg-slate-900'>
+      <Image src="/web3Coder.png" alt="web3 coder png" width={600} height={200} />
     </div>
   );
 }

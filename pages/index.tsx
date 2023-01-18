@@ -6,6 +6,7 @@ import About from '../components/About';
 import Contact from '../components/Contact';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -14,8 +15,11 @@ export default function Home() {
 
   return (
     <div className={`${isDarkMode && 'dark'}`}>
+      <Head>
+        <title>WP ZENG</title>
+      </Head>
       <div
-        className={`relative h-screen overflow-scroll snap-y snap-mandatory
+        className={`relative h-screen overflow-scroll snap-y
         text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 transition duration-500 ease-in-out`}
       >
         <Header />

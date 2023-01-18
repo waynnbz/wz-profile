@@ -10,8 +10,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Poppins', ...defaultTheme.fontFamily.sans],
-        script: ['Moon Dance']
+        sans: ['Rubik', ...defaultTheme.fontFamily.sans],
+        VisueltPro: ['VisueltPro'],
+        Roboto: ['Roboto']
       },
     },
   },

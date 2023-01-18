@@ -1,6 +1,7 @@
 import { useTransition, animated } from '@react-spring/web';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useTheme } from '../utils/theme';
+import Image from 'next/image';
 // import { clearTimeout } from 'timers';
 
 function Hero() {
@@ -59,8 +60,8 @@ function Hero() {
   }, []);
 
   return (
-    <div className="flex h-screen py-40 justify-center text-left">
-      <div className="flex justify-center flex-col text-8xl  font-bold">
+    <div className="flex h-screen py-40 justify-evenly text-left">
+      <div className="flex justify-center flex-col text-6xl  font-bold">
         {transitions(({ innerHeight, ...rest }, item) => (
           <animated.div style={rest} onClick={reset}>
             <animated.div
@@ -71,6 +72,15 @@ function Hero() {
             </animated.div>
           </animated.div>
         ))}
+      </div>
+
+      <div>
+        <Image
+          src="/web3Coder.png"
+          alt="web3 coder png"
+          width={600}
+          height={200}
+        />
       </div>
     </div>
   );
