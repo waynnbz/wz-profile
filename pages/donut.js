@@ -147,10 +147,10 @@
 // export default donut;
 
 import Donut from '../components/Donut';
-import Hero from '../components/_Hero';
+import _Hero from '../components/_Hero';
 
 function donut() {
-  return <Hero />;
+  return <_Hero />;
 }
 
 export default donut;

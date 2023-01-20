@@ -27,13 +27,13 @@ function Contact() {
         <h4 className="text-4xl font-semibold text-center leading-tight">
           I have got just what you need.
           <br />
-          <span className="decoration-[#F7AB0A]/50 underline">Lets Talk</span>
+          <span className="decoration-[#F7AB0A]/50 dark:decoration-[#3b82f680]/50 underline">Lets Talk</span>
         </h4>
 
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <div className="flex gap-2 items-center">
-              <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+              <PhoneIcon className="text-[#F7AB0A] dark:text-[#3b82f680] h-7 w-7 animate-pulse" />
               {' | '}
               <WhatsappIcon className="text-[#25D366] ml-1 bg-white rounded-md h-7 w-7 animate-pulse" />
             </div>
@@ -41,7 +41,7 @@ function Contact() {
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
+            <EnvelopeIcon className="text-[#F7AB0A] dark:text-[#3b82f680] h-7 w-7 animate-pulse" />
             <p className="text-2xl">waylonago@gmail.com</p>
           </div>
 
@@ -78,7 +78,7 @@ function Contact() {
             />
             <button
               type="submit"
-              className="bg-[#F7AB0A]/50 hover:bg-[#F7AB0A]/80 py-5 px-10 rounded-md text-slate-800 hover:text-slate-600 font-bold text-lg"
+              className="bg-[#F7AB0A]/50 dark:bg-[#3b82f680]/50  hover:bg-[#F7AB0A]/80 dark:hover:bg-[#3b82f680]/80 py-5 px-10 rounded-md font-bold text-lg"
             >
               Submit
             </button>

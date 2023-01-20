@@ -18,7 +18,7 @@ function About() {
           </span>
           <span>
             I am currently looking for a Singapore-based developer role.{' '}
-            <span className="decoration-[#F7AB0A]/50 underline font-bold">Hire me?</span>
+            <span className="decoration-[#F7AB0A]/50 dark:decoration-[#3b82f680] underline font-bold">Hire me?</span>
           </span>
         </div>
       </div>

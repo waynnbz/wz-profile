@@ -15,7 +15,7 @@ function Project({ id, title, description, imageLink }: Props) {
   return (
     <div className="flex flex-row relative justify-center items-center">
       <div
-        className={`text-8xl absolute top-[40%] left-[15%] text-[#F7AB0A]/30 hover:scale-110 hover:text-[#F7AB0A]/70 hover:cursor-pointer animate-pulse duration-100
+        className={`text-8xl absolute top-[40%] left-[15%] text-[#F7AB0A]/30 dark:text-[#3b82f680] hover:scale-110 hover:text-[#F7AB0A]/70 dark:hover:text-[#3b82f680]/70 hover:cursor-pointer animate-pulse duration-100
         ${id <= 0 && 'hidden'}
       `}
       >
@@ -30,7 +30,7 @@ function Project({ id, title, description, imageLink }: Props) {
         </div>
       </div>
       <div
-        className={`text-8xl absolute top-[40%] right-[15%] text-[#F7AB0A]/30 hover:scale-110 hover:text-[#F7AB0A]/70 hover:cursor-pointer animate-pulse duration-100
+        className={`text-8xl absolute top-[40%] right-[15%] text-[#F7AB0A]/30 dark:text-[#3b82f680] hover:scale-110 hover:text-[#F7AB0A]/70 dark:hover:text-[#3b82f680]/70 hover:cursor-pointer animate-pulse duration-100
         ${id >= 3 && 'hidden'}
         `}
       >
