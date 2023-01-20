@@ -19,7 +19,7 @@ export default function Home() {
         <title>WP ZENG</title>
       </Head>
       <div
-        className={`relative h-screen overflow-scroll snap-y
+        className={`relative h-screen overflow-scroll
         text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 transition duration-500 ease-in-out`}
       >
         <Header />

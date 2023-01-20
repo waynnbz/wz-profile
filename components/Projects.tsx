@@ -5,23 +5,30 @@ type Props = {};
 function Projects({}: Props) {
   const projects = [
     {
-      id: 1,
+      id: 0,
       title: 'Odyssey Online Banking Web App (Commission)',
       description:
         'Reimagining the online banking experience with video call service, secure login, and modern interface',
       imageLink: '/BankDemo.png',
     },
     {
-      id: 2,
+      id: 1,
       title: 'TopCoder Sales Web App (Commission)',
       description:
         'Enabling the TopCoder sales team with easy access to content management and event-driven project automation',
       imageLink: '/SalesDemo.png',
     },
     {
-      id: 3,
+      id: 2,
       title: 'Food Delivery Mobile App (Personal)',
       description: 'A cloud-driven cross-platform solution for local food hunt',
+      imageLink: '',
+    },
+    {
+      id: 3,
+      title: 'IceMan Role-Playing Game (College)',
+      description:
+        'A treasure-finding adventure game with bots that might outsmart you',
       imageLink: '',
     },
   ];
@@ -36,6 +43,7 @@ function Projects({}: Props) {
         {projects.map(project => (
           <Project
             key={project.id}
+            id={project.id}
             title={project.title}
             description={project.description}
             imageLink={project.imageLink}
@@ -43,7 +51,7 @@ function Projects({}: Props) {
         ))}
       </div>
 
-      <div className="w-full absolute top-[25%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" />
+      {/* <div className="w-full absolute top-[25%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" /> */}
     </div>
   );
 }

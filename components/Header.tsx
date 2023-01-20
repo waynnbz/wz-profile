@@ -17,7 +17,7 @@ function Header() {
         <span>____</span>
       </div>
       <button
-        className=" bg-gray-700 text-gray-100 dark:bg-gray-300 dark:text-gray-800 font-medium p-2 rounded-full hover:shadow-md hover:opacity-80 active:scale-95"
+        className=" bg-gray-700 text-gray-100 dark:bg-gray-200 dark:text-gray-800 text-2xl p-2 rounded-full hover:shadow-md hover:opacity-80 active:scale-95"
         onClick={() => {
           toggleDarkMode();
           localStorage.setItem('dark', JSON.stringify(!isDarkMode));

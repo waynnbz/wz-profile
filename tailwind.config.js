@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         sans: ['Rubik', ...defaultTheme.fontFamily.sans],
         VisueltPro: ['VisueltPro'],
+        CircularStd: ['CircularStd-Bold'],
         Roboto: ['Roboto']
       },
     },

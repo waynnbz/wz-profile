@@ -78,7 +78,7 @@ function Contact() {
             />
             <button
               type="submit"
-              className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg"
+              className="bg-[#F7AB0A]/50 hover:bg-[#F7AB0A]/80 py-5 px-10 rounded-md text-slate-800 hover:text-slate-600 font-bold text-lg"
             >
               Submit
             </button>
