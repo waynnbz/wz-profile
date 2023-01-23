@@ -75,9 +75,9 @@ function Hero() {
           </animated.div>
         ))}
       </div> */}
-      <div className="flex justify-center items-center text-4xl md:text-6xl lg:text-8xl font-CircularStd leading-tight">
+      <div className="flex justify-center items-center text-4xl md:text-6xl lg:text-7xl font-CircularStd leading-tight">
         <h2>
-          Hi, Im <span className="decoration-[#F7AB0A]/50 dark:decoration-[#3b82f680] underline">WAYNN</span>
+          Hi, Im <span className="decoration-[#F7AB0A]/50 dark:decoration-[#3b82f680] underline">WEIPENG</span>
           <br />
           Software Developer
         </h2>
