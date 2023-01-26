@@ -11,10 +11,13 @@ function Header() {
     <header className="sticky top-0 flex w-full justify-around items-center py-5 z-20">
       <div
         onClick={() => router.push('#')}
-        className="text-md leading-4 tracking-wider font-bold flex flex-col cursor-pointer hover:opacity-80"
+        className="text-xl tracking-wide font-bold font-VisueltPro cursor-pointer hover:opacity-80"
       >
-        <span>__</span>
-        <span>____</span>
+        <span>
+          <span className="text-[28px]">W</span>EI
+          <span className="text-[28px]">P</span>ENG{' '}
+          <span className="text-[28px]">Z</span>ENG
+        </span>
       </div>
       <button
         className=" bg-gray-700 text-gray-100 dark:bg-gray-200 dark:text-gray-800 text-2xl p-2 rounded-full hover:shadow-md hover:opacity-80 active:scale-95"

@@ -13,7 +13,11 @@ module.exports = {
         sans: ['Rubik', ...defaultTheme.fontFamily.sans],
         VisueltPro: ['VisueltPro'],
         CircularStd: ['CircularStd-Bold'],
-        Roboto: ['Roboto']
+        Roboto: ['Roboto'],
+      },
+      colors: {
+        'brand-yellow': '#F7AB0A',
+        'brand-blue': '#3B82F6',
       },
     },
   },

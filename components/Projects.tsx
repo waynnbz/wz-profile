@@ -29,7 +29,7 @@ function Projects({}: Props) {
       title: 'IceMan Role-Playing Game (College)',
       description:
         'A treasure-finding adventure game with bots that might outsmart you',
-      imageLink: '',
+      imageLink: '/IceMan.png',
     },
   ];
 

@@ -60,9 +60,11 @@ function Hero() {
   }, []);
 
   return (
-    <div className="flex flex-col items-center h-screen py-40 justify-center gap-6 text-center lg:pl-36
+    <div
+      className="flex flex-col items-center h-screen py-40 justify-center gap-6 text-center lg:pl-36
       lg:flex-row lg:text-left lg:gap-24
-    ">
+    "
+    >
       {/* <div className="flex justify-center flex-col text-8xl font-bold">
         {transitions(({ innerHeight, ...rest }, item) => (
           <animated.div style={rest} onClick={reset}>
@@ -75,20 +77,24 @@ function Hero() {
           </animated.div>
         ))}
       </div> */}
-      <div className="flex justify-center items-center text-4xl md:text-6xl lg:text-7xl font-CircularStd leading-tight">
+      <div className="flex justify-center items-center text-4xl md:text-5xl lg:text-6xl font-CircularStd leading-tight">
         <h2>
-          Hi, Im <span className="decoration-[#F7AB0A]/50 dark:decoration-[#3b82f680] underline">WEIPENG</span>
+          Hi, Im{' '}
+          <span className="decoration-brand-blue/50 dark:decoration-brand-yellow/50 underline">
+            WAYNN
+          </span>
           <br />
           Software Developer
         </h2>
         <></>
       </div>
 
-      <div className="flex relative object-fill w-[400px] h-[600px] lg:w-[600px] lg:h-[800px]">
+      <div className="flex relative w-[300px] h-[500px] lg:w-[600px] lg:h-[600px] lg:mt-[480px]">
         <Image
           src="/web3Coder.png"
           alt="web3 coder png"
           fill
+          className="object-cover overflow-visible"
         />
       </div>
     </div>
