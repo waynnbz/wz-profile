@@ -19,29 +19,23 @@ export default function Home() {
         <title>WP ZENG</title>
       </Head>
       <div
-        className={`relative h-screen overflow-scroll snap-y snap-mandatory
-        text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 transition duration-500 ease-in-out`}
+        className={`relative h-full
+        text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 
+        transition-colors duration-500 ease-in-out`}
       >
-        <Header />
+        <Header darker={true} />
 
-        <section id="hero" className="snap-start">
-          <Hero />
-        </section>
+        <Hero darker={true} />
 
-        <section id="about" className="snap-center">
-          <About />
-        </section>
+        <Projects />
 
         {/* <Skills /> */}
+
         {/* Work Experience */}
 
-        <section id="projects" className="snap-center">
-          <Projects />
-        </section>
+        <About />
 
-        <section id="contact" className="snap-end">
-          <Contact />
-        </section>
+        <Contact />
       </div>
     </div>
   );

@@ -18,7 +18,10 @@ function Contact() {
   };
 
   return (
-    <div className="h-screen relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center ">
+    <div
+      id="contact"
+      className="h-screen relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center "
+    >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
@@ -27,7 +30,9 @@ function Contact() {
         <h4 className="text-4xl font-semibold text-center leading-tight">
           I have got just what you need.
           <br />
-          <span className="decoration-[#F7AB0A]/50 dark:decoration-[#3b82f680]/50 underline">Lets Talk</span>
+          <span className="decoration-[#F7AB0A]/50 dark:decoration-[#3b82f680]/50 underline">
+            Lets Talk
+          </span>
         </h4>
 
         <div className="space-y-10">

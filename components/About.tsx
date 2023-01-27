@@ -6,6 +6,7 @@ function About() {
     <div
       className="flex flex-col relative h-screen gap-12 items-center justify-center text-left py-44
     lg:grid lg:grid-cols-5 px-80 lg:px-48 "
+    id='about'
     >
       <div
         className="col-span-2 flex relative justify-center text-center w-[500px] h-[500px] rounded-lg overflow-hidden

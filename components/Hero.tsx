@@ -4,7 +4,11 @@ import { useTheme } from '../utils/theme';
 import Image from 'next/image';
 // import { clearTimeout } from 'timers';
 
-function Hero() {
+type Props = {
+  darker: boolean;
+};
+
+function Hero({ darker }: Props) {
   const ref = useRef<ReturnType<typeof setTimeout>[]>([]);
   const [items, setItems] = useState<string[]>([]);
   const { isDarkMode } = useTheme();
@@ -61,9 +65,11 @@ function Hero() {
 
   return (
     <div
-      className="flex flex-col items-center h-screen py-40 justify-center gap-6 text-center lg:pl-36
-      lg:flex-row lg:text-left lg:gap-24
-    "
+      id="hero"
+      className={`flex flex-col items-center h-screen justify-center text-center px-64 gap-6 
+      lg:flex-row lg:justify-between lg:text-left lg:gap-24
+      ${darker && 'darker'}
+    `}
     >
       {/* <div className="flex justify-center flex-col text-8xl font-bold">
         {transitions(({ innerHeight, ...rest }, item) => (
@@ -79,9 +85,9 @@ function Hero() {
       </div> */}
       <div className="flex justify-center items-center text-4xl md:text-5xl lg:text-6xl font-CircularStd leading-tight">
         <h2>
-          Hi, Im{' '}
+          Hi, I{'\''}m{' '}
           <span className="decoration-brand-blue/50 dark:decoration-brand-yellow/50 underline">
-            WAYNN
+            WEI PENG
           </span>
           <br />
           Software Developer
