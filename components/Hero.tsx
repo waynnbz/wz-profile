@@ -99,7 +99,7 @@ function Hero({ darker }: Props) {
         <h2 className="leading-tight md:leading-none whitespace-nowrap">
           Hi, I{"'"}m{' '}
           <span className="decoration-brand-blue/50 dark:decoration-brand-yellow/50 underline">
-            WeiPeng
+            Wei Peng
           </span>
           <br />
           Software Developer
@@ -115,7 +115,7 @@ function Hero({ darker }: Props) {
           // offset={-80}
           className="flex justify-start items-center -ml-2 px-5 w-12 h-12 rounded-full cursor-pointer
           md:w-14 md:h-14 md:px-7 md:-ml-4
-          bg-brand-blue/80 dark:bg-brand-yellow/80
+          dark:bg-brand-blue bg-brand-yellow
           hover:translate-x-4 hover:w-48 md:hover:w-64 transition-all duration-500 animate-pulse
         "
         >
