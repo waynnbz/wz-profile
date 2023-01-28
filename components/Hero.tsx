@@ -2,6 +2,8 @@ import { useTransition, animated } from '@react-spring/web';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { useTheme } from '../utils/theme';
 import Image from 'next/image';
+import { Link } from 'react-scroll';
+import { AiOutlineSwapRight as SwapRightIcon } from 'react-icons/ai';
 // import { clearTimeout } from 'timers';
 
 type Props = {
@@ -66,8 +68,8 @@ function Hero({ darker }: Props) {
   return (
     <div
       id="hero"
-      className={`flex flex-col items-center h-screen justify-center text-center px-64 gap-6 
-      lg:flex-row lg:justify-between lg:text-left lg:gap-24
+      className={`flex flex-col items-center h-screen justify-center text-left gap-8 pt-24 bg-slate-100 
+      md:flex-row md:justify-between md:text-left md:gap-24 xl:px-64 md:px-32 md:py-0
       ${darker && 'darker'}
     `}
     >
@@ -83,24 +85,52 @@ function Hero({ darker }: Props) {
           </animated.div>
         ))}
       </div> */}
-      <div className="flex justify-center items-center text-4xl md:text-5xl lg:text-6xl font-CircularStd leading-tight">
-        <h2>
-          Hi, I{'\''}m{' '}
+      <div
+        className="flex flex-col justify-center items-star font-bold font-VisueltPro 
+        text-3xl md:text-4xl xl:text-6xl leading-loose"
+      >
+        <Image
+          src="/quote.svg"
+          alt="quote"
+          width="128"
+          height="128"
+          className="md:mb-8 md:w-fit md:h-fit w-[64px] h-[64px] mb-0"
+        ></Image>
+        <h2 className="leading-tight md:leading-none whitespace-nowrap">
+          Hi, I{"'"}m{' '}
           <span className="decoration-brand-blue/50 dark:decoration-brand-yellow/50 underline">
-            WEI PENG
+            WeiPeng
           </span>
           <br />
           Software Developer
         </h2>
-        <></>
+        <p className="text-lg md:text-2xl xl:text-3xl font-Rubik font-normal text-[#AFADAE] mt-2 mb-4 md:mt-4 md:mb-16">
+          Based in Singapore
+        </p>
+        <Link
+          to="projects"
+          smooth={true}
+          duration={500}
+          spy={true}
+          // offset={-80}
+          className="flex justify-start items-center -ml-2 px-5 w-12 h-12 rounded-full cursor-pointer
+          md:w-14 md:h-14 md:px-7 md:-ml-4
+          bg-brand-blue/80 dark:bg-brand-yellow/80
+          hover:translate-x-4 hover:w-48 md:hover:w-64 transition-all duration-500 animate-pulse
+        "
+        >
+          <div className="text-lg md:text-2xl font-Rubik font-medium whitespace-nowrap flex items-center gap-2 md:gap-4 ">
+            View all works <SwapRightIcon className="scale-x-150" />
+          </div>
+        </Link>
       </div>
 
-      <div className="flex relative w-[300px] h-[500px] lg:w-[600px] lg:h-[600px] lg:mt-[480px]">
+      <div className="flex relative w-2/5 h-3/5">
         <Image
           src="/web3Coder.png"
           alt="web3 coder png"
           fill
-          className="object-cover overflow-visible"
+          className="object-cover object-top overflow-visible"
         />
       </div>
     </div>

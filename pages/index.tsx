@@ -33,9 +33,9 @@ export default function Home() {
 
         {/* Work Experience */}
 
-        <About />
+        {/* <About /> */}
 
-        <Contact />
+        {/* <Contact /> */}
       </div>
     </div>
   );

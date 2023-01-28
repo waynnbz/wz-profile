@@ -14,7 +14,10 @@ function Header({ darker }: Props) {
 
   return (
     <header
-      className={`fixed top-0 w-full flex justify-between items-center py-12 px-64 z-20 bg-slate-100/50 dark:bg-slate-700/50`}
+      className={`fixed top-0 w-screen flex justify-between items-center px-16 py-4 z-20 
+      bg-slate-900/50 dark:bg-slate-700/50
+      xl:px-64 md:px-32 md:py-8 lg:py-10
+      `}
     >
       <ScrollLink
         to="hero"
@@ -24,13 +27,14 @@ function Header({ darker }: Props) {
         offset={-80}
         className="text-[32px] font-bold  font-VisueltPro cursor-pointer"
       >
-        WP ZENG
-        <span className="text-brand-blue/80 dark:text-brand-yellow/80">.</span>
+        <span className='hidden lg:inline'>WeiPeng ZENG</span>
+        <span className='inline lg:hidden'>WP ZENG</span>
+        <span className="text-brand-blue/50 dark:text-brand-yellow/50">.</span>
       </ScrollLink>
 
       <nav>
         <ul
-          className="flex items-center gap-16
+          className="hidden items-center lg:flex lg:gap-8 2xl:gap-16
           text-[24px]
         "
         >
@@ -41,7 +45,7 @@ function Header({ darker }: Props) {
               duration={500}
               spy={true}
               // offset={-80}
-              className="cursor-pointer"
+              className="cursor-pointer hidden md:flex"
             >
               Projects
             </ScrollLink>
@@ -53,7 +57,7 @@ function Header({ darker }: Props) {
               duration={500}
               spy={true}
               // offset={-80}
-              className="cursor-pointer"
+              className="cursor-pointer hidden md:flex"
             >
               Skills
             </ScrollLink>
@@ -65,7 +69,7 @@ function Header({ darker }: Props) {
               duration={500}
               spy={true}
               // offset={-80}
-              className="cursor-pointer"
+              className="cursor-pointer hidden md:flex"
             >
               About Me
             </ScrollLink>
@@ -77,7 +81,7 @@ function Header({ darker }: Props) {
               duration={500}
               spy={true}
               // offset={-80}
-              className="cursor-pointer"
+              className="cursor-pointer hidden md:flex"
             >
               Contact
             </ScrollLink>

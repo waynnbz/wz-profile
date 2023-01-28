@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Rubik', ...defaultTheme.fontFamily.sans],
+        Rubik: ['Rubik'],
         VisueltPro: ['VisueltPro'],
         CircularStd: ['CircularStd-Bold'],
         Roboto: ['Roboto'],
@@ -23,4 +24,3 @@ module.exports = {
   },
   plugins: [],
 };
-
