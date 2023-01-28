@@ -30,7 +30,7 @@ function Header({ darker }: Props) {
       >
         <span className="hidden lg:inline">WEIPENG</span>
         <span className="inline lg:hidden">WP</span>
-        <span className="text-brand-blue/50 dark:text-brand-yellow/50">.</span>
+        <span className="dark:text-brand-blue text-brand-yellow">.</span>
       </ScrollLink>
 
       <nav>
@@ -39,18 +39,6 @@ function Header({ darker }: Props) {
            text-[20px]  xl:text-[24px]
         "
         >
-          <li>
-            <ScrollLink
-              to="projects"
-              smooth={true}
-              duration={500}
-              spy={true}
-              // offset={-80}
-              className="cursor-pointer hidden md:flex"
-            >
-              Projects
-            </ScrollLink>
-          </li>
           {/* <li>
             <ScrollLink
               to="skills"
@@ -73,6 +61,18 @@ function Header({ darker }: Props) {
               className="cursor-pointer hidden md:flex"
             >
               About Me
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="projects"
+              smooth={true}
+              duration={500}
+              spy={true}
+              // offset={-80}
+              className="cursor-pointer hidden md:flex"
+            >
+              Projects
             </ScrollLink>
           </li>
           <li>
@@ -100,7 +100,7 @@ function Header({ darker }: Props) {
             </button>
           </li>
         </ul>
-        <div className='flex lg:hidden'>
+        <div className="flex lg:hidden">
           {/* <MenuIcon onClick={() => {}} className='text-3xl cursor-pointer' /> */}
           <button
             className=" bg-gray-700 text-gray-100 dark:bg-gray-200 dark:text-gray-800 text-2xl p-2 rounded-full 

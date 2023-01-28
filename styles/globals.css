@@ -34,6 +34,24 @@
 }
 
 @font-face {
+  font-family: 'VisueltPro';
+  src: url('../public/fonts/VisueltPro/VisueltPro-Medium.woff2') format('woff2'),
+       url('../public/fonts/VisueltPro/VisueltPro-Medium.woff') format('woff'),
+       url('../public/fonts/VisueltPro/VisueltPro-Medium.ttf') format('truetype');
+  font-weight: medium;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'VisueltPro';
+  src: url('../public/fonts/VisueltPro/VisueltPro-Light.woff2') format('woff2'),
+       url('../public/fonts/VisueltPro/VisueltPro-Light.woff') format('woff'),
+       url('../public/fonts/VisueltPro/VisueltPro-Light.ttf') format('truetype');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'CircularStd-Bold';
   src: url('../public/fonts/CircularStd-Bold.ttf') format('truetype');
   font-weight: bold;

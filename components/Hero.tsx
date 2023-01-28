@@ -86,7 +86,7 @@ function Hero({ darker }: Props) {
         ))}
       </div> */}
       <div
-        className="flex flex-col justify-center items-star font-bold font-VisueltPro 
+        className="flex flex-col justify-center items-star font-VisueltPro
         text-3xl md:text-4xl xl:text-6xl leading-loose"
       >
         <Image
@@ -96,15 +96,15 @@ function Hero({ darker }: Props) {
           height="128"
           className="md:mb-8 md:w-fit md:h-fit w-[64px] h-[64px] mb-0"
         ></Image>
-        <h2 className="leading-tight md:leading-none whitespace-nowrap">
+        <h2 className="leading-tight md:leading-0 whitespace-nowrap">
           Hi, I{"'"}m{' '}
-          <span className="decoration-brand-blue/50 dark:decoration-brand-yellow/50 underline">
+          <span className="dark:decoration-brand-blue/60 decoration-brand-yellow/60  font-bold">
             Wei Peng
           </span>
           <br />
           Software Developer
         </h2>
-        <p className="text-lg md:text-2xl xl:text-3xl font-Rubik font-normal text-[#AFADAE] mt-2 mb-4 md:mt-4 md:mb-16">
+        <p className="text-sm md:text-2xl xl:text-2xl font-Rubik font-normal text-[#AFADAE] mt-2 mb-4 md:mt-4 md:mb-16">
           Based in Singapore
         </p>
         <Link
@@ -113,13 +113,13 @@ function Hero({ darker }: Props) {
           duration={500}
           spy={true}
           // offset={-80}
-          className="flex justify-start items-center -ml-2 px-5 w-12 h-12 rounded-full cursor-pointer
-          md:w-14 md:h-14 md:px-7 md:-ml-4
-          dark:bg-brand-blue bg-brand-yellow
-          hover:translate-x-4 hover:w-48 md:hover:w-64 transition-all duration-500 animate-pulse
+          className="flex justify-start items-center -ml-3 px-5 w-12 h-12 rounded-full cursor-pointer
+          md:w-16 md:h-16 md:px-8 md:-ml-5
+          dark:bg-brand-blue/80 bg-brand-yellow/80
+          hover:translate-x-2 md:hover:translate-x-4 hover:w-52 md:hover:w-[318px] transition-all duration-500 animate-pulse hover:animate-none
         "
         >
-          <div className="text-lg md:text-2xl font-Rubik font-medium whitespace-nowrap flex items-center gap-2 md:gap-4 ">
+          <div className="text-xl md:text-3xl font-Rubik font-medium whitespace-nowrap flex items-center gap-2 md:gap-4 tracking-wide">
             View all works <SwapRightIcon className="scale-x-150" />
           </div>
         </Link>
