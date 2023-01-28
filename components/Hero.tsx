@@ -125,7 +125,7 @@ function Hero({ darker }: Props) {
         </Link>
       </div>
 
-      <div className="flex relative w-min-[300px] w-2/5 h-3/5">
+      <div className="flex relative overflow-visible w-2/5 h-3/5">
         <Image
           src="/web3Coder.png"
           alt="web3 coder png"
