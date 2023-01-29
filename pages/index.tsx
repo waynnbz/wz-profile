@@ -35,7 +35,7 @@ export default function Home() {
 
         {/* Work Experience */}
 
-        <Contact />
+        {/* <Contact /> */}
       </div>
     </div>
   );

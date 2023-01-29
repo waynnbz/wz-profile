@@ -59,7 +59,7 @@ function Project({
                 src={image}
                 alt="image 1"
                 fill
-                className={`object-cover object-center hover:overflow-visible rounded-md hover:scale-[1.54] hover:z-40 hover:shadow-md transition duration-700
+                className={`object-cover object-center hover:object-contain rounded-md hover:scale-[1.54] hover:z-40 hover:shadow transition duration-700
               ${
                 index === 0 &&
                 `${

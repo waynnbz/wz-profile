@@ -63,7 +63,7 @@ function Projects({ darker }: Props) {
     <div
       id="projects"
       className={`h-fit w-full flex flex-col
-      py-32 md:py-48
+      py-32 md:py-40
       xl:px-64 md:px-32 sm:px-16 px-8 ${darker && 'darker'}`}
     >
       <h3 className="text-3xl md:text-4xl xl:text-6xl font-bold mb-16 md:mb-24">
