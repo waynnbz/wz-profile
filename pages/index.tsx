@@ -27,7 +27,7 @@ export default function Home() {
 
         <Hero darker={true} />
 
-        <About />
+        <About darker={false} />
 
         <Projects darker={true} />
 
@@ -35,7 +35,7 @@ export default function Home() {
 
         {/* Work Experience */}
 
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </div>
   );

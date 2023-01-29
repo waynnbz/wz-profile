@@ -20,9 +20,9 @@ function Contact() {
   return (
     <div
       id="contact"
-      className="h-screen relative flex flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center "
+      className="flex flex-col text-center h-screen  max-w-7xl px-10 justify-evenly mx-auto items-center "
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl">
         Contact
       </h3>
 
@@ -50,7 +50,7 @@ function Contact() {
             <p className="text-2xl">waylonago@gmail.com</p>
           </div>
 
-          <form
+          {/* <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col space-y-2 w-fit mx-auto"
           >
@@ -87,7 +87,7 @@ function Contact() {
             >
               Submit
             </button>
-          </form>
+          </form> */}
         </div>
       </div>
     </div>
