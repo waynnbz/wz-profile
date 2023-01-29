@@ -15,9 +15,9 @@ function Header({ darker }: Props) {
 
   return (
     <header
-      className={`fixed top-0 w-screen flex justify-between items-center px-16 py-8 z-20 
+      className={`fixed top-0 w-screen flex justify-between items-center py-8 z-50
       bg-slate-100/50 dark:bg-slate-800/50
-      xl:px-64 md:px-32 md:pt-8 lg:pt-10
+      xl:px-64 md:px-32 sm:px-16 px-8 md:pt-8 lg:pt-10
       `}
     >
       <ScrollLink

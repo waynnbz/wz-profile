@@ -27,15 +27,15 @@ export default function Home() {
 
         <Hero darker={true} />
 
-        {/* <About /> */}
+        <About />
 
-        <Projects />
+        <Projects darker={true} />
 
         {/* <Skills /> */}
 
         {/* Work Experience */}
 
-        {/* <Contact /> */}
+        <Contact />
       </div>
     </div>
   );

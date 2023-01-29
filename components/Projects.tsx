@@ -1,55 +1,88 @@
 import Project from './Project';
 
-type Props = {};
+type Props = {
+  darker: boolean;
+};
 
-function Projects({}: Props) {
+function Projects({ darker }: Props) {
   const projects = [
     {
       id: 0,
-      title: 'Odyssey Online Banking Web App (Commission)',
+      title: 'Online Banking CRM',
+      projectType: 'Commission',
       description:
         'Reimagining the online banking experience with video call service, secure login, and modern interface',
-      imageLink: '/BankDemo.png',
+      imageLinks: [
+        '/Projects/BankDemo/3-call-self.png',
+        '/Projects/BankDemo/2-findSession.png',
+        '/Projects/BankDemo/1-login.png',
+      ],
+      vertical: false,
+      video: false,
+      bgColor: 'bg-[#93D0EF]/75',
     },
     {
       id: 1,
-      title: 'TopCoder Sales Web App (Commission)',
+      title: 'Sales Web App',
+      projectType: 'Commission',
       description:
         'Enabling the TopCoder sales team with easy access to content management and event-driven project automation',
-      imageLink: '/SalesDemo.png',
+      imageLinks: [
+        '/Projects/SalesAppDemo/3-ProjectDetails.png',
+        '/Projects/SalesAppDemo/2-Project.png',
+        '/Projects/SalesAppDemo/1-Home.png',
+      ],
+      vertical: true,
+      video: false,
+      bgColor: 'bg-[#CEAFD9]/75',
     },
     {
       id: 2,
-      title: 'Food Delivery Mobile App (Personal)',
+      title: 'Food Deliver',
+      projectType: 'Personal',
       description: 'A cloud-driven cross-platform solution for local food hunt',
-      imageLink: '/FoodDelivery.png',
+      imageLinks: ['/Projects/FoodDemo/FoodDelivery.png'],
+      vertical: false,
+      video: true,
+      bgColor: 'bg-[#E6EAEA]/75',
     },
     {
       id: 3,
-      title: 'IceMan Role-Playing Game (College)',
+      title: 'IceMan',
+      projectType: 'College',
       description:
         'A treasure-finding adventure game with bots that might outsmart you',
-      imageLink: '/IceMan.png',
+      imageLinks: ['/Projects/IceManDemo/IceMan.png'],
+      vertical: false,
+      video: true,
+      bgColor: 'bg-[#91D1A8]/75',
     },
   ];
 
   return (
     <div
       id="projects"
-      className="h-screen relative flex flex-col overflow-hidden text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+      className={`h-fit w-full flex flex-col
+      py-32 md:py-48
+      xl:px-64 md:px-32 sm:px-16 px-8 ${darker && 'darker'}`}
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="text-3xl md:text-4xl xl:text-6xl font-bold mb-16 md:mb-24">
         Projects
       </h3>
 
-      <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory">
+      {/* <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory"> */}
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-x-32 justify-items-center">
         {projects.map(project => (
           <Project
             key={project.id}
             id={project.id}
             title={project.title}
+            projectType={project.projectType}
             description={project.description}
-            imageLink={project.imageLink}
+            imageLinks={project.imageLinks}
+            vertical={project.vertical}
+            video={project.video}
+            bgColor={project.bgColor}
           />
         ))}
       </div>
