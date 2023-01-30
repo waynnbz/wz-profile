@@ -13,8 +13,8 @@ function Projects({ darker }: Props) {
       description:
         'Reimagining the online banking experience with video call service, secure login, and modern interface',
       imageLinks: [
-        '/Projects/BankDemo/3-call.png',
-        '/Projects/BankDemo/2-findSession.png',
+        '/Projects/BankDemo/3-call-self.png',
+        '/Projects/BankDemo/5-dashboard-services.png',
         '/Projects/BankDemo/1-login.png',
       ],
       vertical: false,
@@ -29,8 +29,8 @@ function Projects({ darker }: Props) {
         'Enabling the sales team with easy access to content management and event-driven project automation',
       imageLinks: [
         '/Projects/SalesAppDemo/3-ProjectDetails.png',
-        '/Projects/SalesAppDemo/2-Project.png',
         '/Projects/SalesAppDemo/1-Home.png',
+        '/Projects/SalesAppDemo/2-Project.png',
       ],
       vertical: true,
       video: false,
