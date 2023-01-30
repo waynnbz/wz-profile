@@ -11,10 +11,11 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Rubik', ...defaultTheme.fontFamily.sans],
-        Rubik: ['Rubik'],
         VisueltPro: ['VisueltPro'],
-        CircularStd: ['CircularStd-Bold'],
         Roboto: ['Roboto'],
+        LeagueSpartan: ['League Spartan'],
+        Rubik: ['Rubik'],
+        CircularStd: ['CircularStd-Bold'],
       },
       colors: {
         'brand-yellow': '#F7AB0A',

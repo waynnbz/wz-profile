@@ -32,7 +32,7 @@ function Contact({ darker }: Props) {
     `}
     >
       <div className="flex flex-col gap-8 justify-center items-center lg:items-start">
-        <div className="text-3xl md:text-4xl xl:text-6xl font-bold mb-4">
+        <div className="text-3xl md:text-4xl xl:text-6xl font-bold mb-4 font-CircularStd">
           Contact
         </div>
         <div className="flex justify-center items-lef space-x-5">

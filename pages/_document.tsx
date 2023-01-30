@@ -12,20 +12,24 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Montserrat"
           rel="stylesheet"
         /> */}
-        <link
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=Roboto&display=optional"
           rel="stylesheet"
-        />
-        <link
+        /> */}
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=Poppins&display=optional"
           rel="stylesheet"
-        />
+        /> */}
+        {/* <link
+          href="https://fonts.googleapis.com/css2?family=League+Spartan&display=optional"
+          rel="stylesheet"
+        /> */}
         {/* <link
           href="https://fonts.googleapis.com/css2?family=Rubik&display=optional"
           rel="stylesheet"
         /> */}
         <link
-          href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Poppins&family=League+Spartan&family=Roboto&family=Rubik:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
         {/* <link

@@ -24,10 +24,10 @@ function About({ darker }: Props) {
       </div>
 
       <div className="flex flex-col lg:col-span-3">
-        <div className="text-3xl md:text-4xl xl:text-6xl font-bold mb-10">
+        <div className="text-3xl md:text-4xl xl:text-6xl font-bold mb-10 font-CircularStd">
           About me
         </div>
-        <div className="flex flex-col gap-8 text-xl md:text-2xl xl:text-3xl">
+        <div className="flex flex-col gap-8 text-xl md:text-2xl xl:text-3xl font-LeagueSpartan">
           <span>
             Two years working in Web/Mobile Development and Product Ops. I am
             comfortable with Agile/Scrum development and CI/CD workflow. While I

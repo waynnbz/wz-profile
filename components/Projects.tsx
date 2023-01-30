@@ -26,7 +26,7 @@ function Projects({ darker }: Props) {
       title: 'Sales Web App',
       projectType: 'Commission',
       description:
-        'Enabling the TopCoder sales team with easy access to content management and event-driven project automation',
+        'Enabling the sales team with easy access to content management and event-driven project automation',
       imageLinks: [
         '/Projects/SalesAppDemo/3-ProjectDetails.png',
         '/Projects/SalesAppDemo/2-Project.png',
@@ -66,7 +66,7 @@ function Projects({ darker }: Props) {
       py-32 md:py-40
       xl:px-64 md:px-32 sm:px-16 px-8 ${darker && 'darker'}`}
     >
-      <h3 className="text-3xl md:text-4xl xl:text-6xl font-bold mb-16 md:mb-24">
+      <h3 className="text-3xl md:text-4xl xl:text-6xl font-bold mb-16 md:mb-24 font-CircularStd">
         Projects
       </h3>
 

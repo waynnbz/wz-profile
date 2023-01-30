@@ -26,7 +26,7 @@ function Header({ darker }: Props) {
         duration={500}
         spy={true}
         offset={-80}
-        className="text-[32px] font-bold cursor-pointer"
+        className="text-[32px] font-bold cursor-pointer font-Rubik"
       >
         <span className="hidden lg:inline">WEIPENG</span>
         <span className="inline lg:hidden">WP</span>
@@ -35,7 +35,8 @@ function Header({ darker }: Props) {
 
       <nav>
         <ul
-          className="hidden items-center lg:flex lg:gap-8 2xl:gap-16
+          className="hidden items-center font-CircularStd
+          lg:flex lg:gap-8 2xl:gap-16
            text-[20px]  xl:text-[24px]
         "
         >

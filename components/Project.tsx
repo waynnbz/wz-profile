@@ -1,8 +1,9 @@
 import Image from 'next/image';
-import {
-  RxDoubleArrowLeft as LeftArrowIcon,
-  RxDoubleArrowRight as RightArrowIcon,
-} from 'react-icons/rx';
+import { IoPlayForward as PlayIcon } from 'react-icons/io5';
+// import {
+//   RxDoubleArrowLeft as LeftArrowIcon,
+//   RxDoubleArrowRight as RightArrowIcon,
+// } from 'react-icons/rx';
 
 type Props = {
   id: number;
@@ -34,25 +35,29 @@ function Project({
     >
       {/* Image/Video */}
       <div
-        className={`w-full h-5/6 bg rounded-[28px]
+        className={`relative w-full h-5/6 bg rounded-[28px]
         flex justify-center items-center p-8  ${
           vertical ? 'flex-row-reverse -space-x-0' : 'flex-col -space-y-0'
         }  ${bgColor} shadow-md shadow-gray-300 dark:shadow-gray-600
-        overflow-hidden ring-8 ring-brand-blue/30
+        overflow-hidden 
+        hover:ring-8 hover:dark:ring-brand-blue/30 hover:ring-brand-yellow/30
       `}
       >
         {video ? (
+          // <div className=''>
           <video
             loop
             muted
             onMouseOver={event => event.currentTarget.play()}
             onMouseOut={event => event.currentTarget.pause()}
-            className=" w-fit h-5/6
+            className=" w-fit h-5/6 hover:z-20
             hover:scale-110 hover:shadow-lg rounded-xl transition-transformation duration-500"
           >
             <source src={imageLinks[0]} />
           </video>
         ) : (
+          // {/* <div className='absolute'>Play</div> */}
+          // </div>
           imageLinks.map((image, index) => (
             <div
               key={index}
@@ -83,9 +88,13 @@ function Project({
             </div>
           ))
         )}
-        {/* <Image src={imageLinks[0]} alt="image 1" width={50} height={50} />
-        <Image src={imageLinks[1]} alt="image 1" width={50} height={50} />
-        <Image src={imageLinks[2]} alt="image 1" width={50} height={50} /> */}
+        {/* {video ? (
+          <div className="absolute top-1/2 z-10">
+            <PlayIcon  className='text-6xl text-brand-yellow/60 dark:text-brand-blue/50'/>
+          </div>
+        ) : (
+          <></>
+        )} */}
       </div>
 
       {/* Text */}
@@ -94,7 +103,9 @@ function Project({
         <span className="text-[#A6A6A6] dark:text-gray-700 text-[20px] md:text-[24px] font-medium">
           {projectType}
         </span>
-        <p className="text-[20px] md:text-[24px] font-Roboto ">{description}</p>
+        <p className="text-[20px] md:text-[24px]  font-LeagueSpartan ">
+          {description}
+        </p>
       </div>
     </div>
     // <div className="flex flex-row relative justify-center items-center">
