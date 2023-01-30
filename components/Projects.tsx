@@ -19,7 +19,7 @@ function Projects({ darker }: Props) {
       ],
       vertical: false,
       video: false,
-      bgColor: 'bg-[#93D0EF]/75',
+      bgColor: 'bg-[#B6D0ED]/80',
     },
     {
       id: 1,
@@ -34,7 +34,7 @@ function Projects({ darker }: Props) {
       ],
       vertical: true,
       video: false,
-      bgColor: 'bg-[#CEAFD9]/75',
+      bgColor: 'bg-[#CEAFD9]/80',
     },
     {
       id: 2,
@@ -44,7 +44,7 @@ function Projects({ darker }: Props) {
       imageLinks: ['/Projects/FoodDemo/FoodAnimation.mp4'],
       vertical: false,
       video: true,
-      bgColor: 'bg-[#E6EAEA]/75',
+      bgColor: 'bg-[#E6EAEA]/80',
     },
     {
       id: 3,
@@ -55,7 +55,7 @@ function Projects({ darker }: Props) {
       imageLinks: ['/Projects/IceManDemo/IceManAnimation.mp4'],
       vertical: false,
       video: true,
-      bgColor: 'bg-[#91D1A8]/75',
+      bgColor: 'bg-[#91D1A8]/80',
     },
   ];
 
@@ -63,15 +63,14 @@ function Projects({ darker }: Props) {
     <div
       id="projects"
       className={`h-fit w-full flex flex-col
-      py-32 md:py-40
+      py-24 md:py-40
       xl:px-64 md:px-32 sm:px-16 px-8 ${darker && 'darker'}`}
     >
       <h3 className="text-3xl md:text-4xl xl:text-6xl font-bold mb-16 md:mb-24 font-CircularStd">
         Projects
       </h3>
 
-      {/* <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory"> */}
-      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-x-32 justify-items-center">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-y-0 gap-x-32 gap-y-16 justify-items-center">
         {projects.map(project => (
           <Project
             key={project.id}
@@ -86,8 +85,6 @@ function Projects({ darker }: Props) {
           />
         ))}
       </div>
-
-      {/* <div className="w-full absolute top-[25%] bg-[#F7AB0A]/10 left-0 h-[500px] -skew-y-12" /> */}
     </div>
   );
 }

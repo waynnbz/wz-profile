@@ -31,7 +31,7 @@ function Contact({ darker }: Props) {
       id="contact"
       className={`flex flex-col relative h-screen lg:gap-32 items-center justify-between text-left
     lg:flex-row 
-    py-32 lg:py-48
+    py-24 lg:py-48
     xl:px-64 md:px-32 sm:px-16 px-8 ${darker && 'darker'}
     `}
     >

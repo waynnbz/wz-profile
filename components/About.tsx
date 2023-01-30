@@ -11,7 +11,7 @@ function About({ darker }: Props) {
       className={`flex flex-col-reverse relative h-fit gap-12 lg:gap-32 items-center justify-center text-left
     lg:grid lg:grid-cols-5
     
-    py-32 md:py-48
+    py-24 md:py-48
     xl:px-64 md:px-32 sm:px-16 px-8 ${darker && 'darker'}
     `}
       id="about"
@@ -31,7 +31,7 @@ function About({ darker }: Props) {
           <span>
             Two years working in Web/Mobile Development and Product Ops. I am
             comfortable with Agile/Scrum development and CI/CD workflow. While I
-            come from a technical CS background, I pay close attention to
+            came from a technical CS background, I pay close attention to
             business logic and strive to deliver real-world solutions.
           </span>
           <span>

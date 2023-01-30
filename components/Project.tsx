@@ -30,17 +30,17 @@ function Project({
     <div
       className={`flex flex-col justify-start items-center text-center gap-8
        w-full h-[780px]
-      ${id % 2 != 0 && 'mt-32'}
+      ${id % 2 != 0 && 'lg:mt-32'}
       `}
     >
       {/* Image/Video */}
       <div
         className={`relative w-full h-5/6 bg rounded-[28px]
         flex justify-center items-center p-8  ${
-          vertical ? 'flex-row-reverse -space-x-0' : 'flex-col -space-y-0'
+          vertical ? 'flex-row-reverse' : 'flex-col'
         }  ${bgColor} shadow-md shadow-gray-300 dark:shadow-gray-600
         overflow-hidden 
-        hover:ring-8 hover:dark:ring-brand-blue/30 hover:ring-brand-yellow/30
+        hover:ring-2 hover:dark:ring-brand-blue/30 hover:ring-brand-yellow/30
       `}
       >
         {video ? (
@@ -56,32 +56,30 @@ function Project({
             <source src={imageLinks[0]} />
           </video>
         ) : (
-          // {/* <div className='absolute'>Play</div> */}
-          // </div>
           imageLinks.map((image, index) => (
             <div
               key={index}
               className={`relative  ${
-                vertical ? 'w-1/3 h-2/3 ' : 'w-3/5 h-2/5 '
+                vertical ? 'w-[200px] h-[321px] ' : 'w-3/5 h-2/5 '
               }`}
             >
               <Image
                 src={image}
                 alt="image 1"
                 fill
-                className={`object-cover object-center hover:overflow-visible rounded-md hover:scale-[1.54] hover:z-40 hover:shadow transition duration-700
+                className={`object-cover object-center rounded-md hover:scale-[1.7] hover:z-40 transition duration-700
               ${
                 index === 0 &&
                 `${
                   vertical ? 'hover:-translate-x-14' : 'hover:translate-y-14'
-                } blur-[0.8px] hover:blur-none`
+                } blur-none hover:blur-none`
               }
               ${index === 1 && 'scale-[1.4] z-10'}
               ${
                 index === 2 &&
                 `${
                   vertical ? 'hover:translate-x-14' : 'hover:-translate-y-14'
-                } blur-[0.8px] hover:blur-none`
+                } blur-none hover:blur-none`
               }
             `}
               />
