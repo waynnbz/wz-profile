@@ -50,8 +50,10 @@ function Project({
             muted
             onMouseOver={event => event.currentTarget.play()}
             onMouseOut={event => event.currentTarget.pause()}
-            className={`w-fit ${vertical ? 'h-5/6' : 'h-fit'} hover:z-20
-            hover:scale-105 hover:shadow-lg hover:shadow-slate-500 rounded-xl transition-transformation duration-500`}
+            className={`w-fit ${
+              vertical ? 'h-5/6' : 'h-4/6 md:h-5/6'
+            } hover:z-20
+            hover:scale-110 hover:shadow-lg hover:shadow-slate-500 rounded-xl transition-transformation duration-500`}
           >
             <source src={imageLinks[0]} />
           </video>
