@@ -32,11 +32,13 @@ function Project({
       ${id % 2 != 0 && 'mt-32'}
       `}
     >
+      {/* Image/Video */}
       <div
         className={`w-full h-5/6 bg rounded-[28px]
         flex justify-center items-center p-8  ${
           vertical ? 'flex-row-reverse -space-x-0' : 'flex-col -space-y-0'
         }  ${bgColor} shadow-md shadow-gray-300 dark:shadow-gray-600
+        overflow-hidden ring-8 ring-brand-blue/30
       `}
       >
         {video ? (
@@ -45,7 +47,7 @@ function Project({
             muted
             onMouseOver={event => event.currentTarget.play()}
             onMouseOut={event => event.currentTarget.pause()}
-            className=" w-fit h-5/6 bg-red-300
+            className=" w-fit h-5/6
             hover:scale-110 hover:shadow-lg rounded-xl transition-transformation duration-500"
           >
             <source src={imageLinks[0]} />
@@ -54,7 +56,9 @@ function Project({
           imageLinks.map((image, index) => (
             <div
               key={index}
-              className={`relative ${vertical ? 'w-1/3 h-2/3 ' : 'w-3/5 h-2/5 '}`}
+              className={`relative  ${
+                vertical ? 'w-1/3 h-2/3 ' : 'w-3/5 h-2/5 '
+              }`}
             >
               <Image
                 src={image}
@@ -83,12 +87,14 @@ function Project({
         <Image src={imageLinks[1]} alt="image 1" width={50} height={50} />
         <Image src={imageLinks[2]} alt="image 1" width={50} height={50} /> */}
       </div>
+
+      {/* Text */}
       <div className="flex flex-col gap-2 px-4 md:px-8">
-        <h1 className="text-4xl font-medium">{title}</h1>
-        <span className="text-[#A6A6A6] dark:text-gray-700 text-[24px] font-medium">
+        <h1 className="text-2xl md:text-4xl font-medium">{title}</h1>
+        <span className="text-[#A6A6A6] dark:text-gray-700 text-[20px] md:text-[24px] font-medium">
           {projectType}
         </span>
-        <p className="text-[24px] font-Roboto ">{description}</p>
+        <p className="text-[20px] md:text-[24px] font-Roboto ">{description}</p>
       </div>
     </div>
     // <div className="flex flex-row relative justify-center items-center">
