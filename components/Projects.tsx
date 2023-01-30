@@ -13,7 +13,7 @@ function Projects({ darker }: Props) {
       description:
         'Reimagining the online banking experience with video call service, secure login, and modern interface',
       imageLinks: [
-        '/Projects/BankDemo/3-call-self.png',
+        '/Projects/BankDemo/3-call.png',
         '/Projects/BankDemo/2-findSession.png',
         '/Projects/BankDemo/1-login.png',
       ],
