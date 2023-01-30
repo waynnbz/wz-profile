@@ -21,10 +21,10 @@ type Props = {
 };
 
 function Contact({ darker }: Props) {
-  const { register, handleSubmit } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = formData => {
-    window.location.href = `mailto:waylonago@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
-  };
+  // const { register, handleSubmit } = useForm<Inputs>();
+  // const onSubmit: SubmitHandler<Inputs> = formData => {
+  //   window.location.href = `mailto:waylonago@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
+  // };
 
   return (
     <div
@@ -35,7 +35,7 @@ function Contact({ darker }: Props) {
     xl:px-64 md:px-32 sm:px-16 px-8 ${darker && 'darker'}
     `}
     >
-      <div className="flex flex-col gap-8 justify-center items-center lg:items-start">
+      <div className="flex flex-col gap-6 md:gap-8 justify-center items-center lg:items-start">
         <div className="text-3xl md:text-4xl xl:text-6xl font-bold mb-4 font-CircularStd">
           Contact
         </div>
@@ -45,7 +45,7 @@ function Contact({ darker }: Props) {
             {' | '}
             <WhatsappIcon className="text-[#25D366] ml-1 bg-white rounded-md h-7 w-7 animate-pulse" />
           </div>
-          <p className="text-2xl">+65 8506 7073</p>
+          <p className="text-lg md:text-2xl">+65 8506 7073</p>
         </div>
 
         <div
@@ -55,12 +55,12 @@ function Contact({ darker }: Props) {
           className="flex justify-center items-center space-x-5 cursor-pointer hover:text-[#F7AB0A] hover:dark:text-[#3b82f680]"
         >
           <EnvelopeIcon className="h-7 w-7 animate-pulse" />
-          <p className="text-2xl">waylonago@gmail.com</p>
+          <p className="text-lg md:text-2xl">waylonago@gmail.com</p>
         </div>
 
         <div className="w-full h-0.5 bg-slate-400"></div>
 
-        <div className="flex gap-12 text-1xl md:text-2xl xl:text-4xl font-bold font-CircularStd">
+        <div className="flex flex-col text-center whitespace-nowrap md:text-left md:flex-row gap-6 md:gap-12 text-2xl xl:text-4xl font-bold font-CircularStd">
           let{"'"}s connect:
           <div className="flex gap-8 items-center text-lg font-normal font-sans">
             <LinkedInIcon
@@ -135,97 +135,6 @@ function Contact({ darker }: Props) {
         />
       </div>
     </div>
-
-    // <div
-    //   id="contact"
-    //   className="flex flex-col text-center h-screen  max-w-7xl px-10 justify-evenly mx-auto items-center "
-    // >
-    //   <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl">
-    //     Contact
-    //   </h3>
-
-    //   <div className="flex flex-col space-y-10">
-    //     <h4 className="text-4xl font-semibold text-center leading-tight">
-    //       I have got just what you need.
-    //       <br />
-    //       <span className="decoration-[#F7AB0A]/50 dark:decoration-[#3b82f680]/50 underline">
-    //         Lets Talk
-    //       </span>
-    //     </h4>
-
-    //     <div className="space-y-10">
-    //       <div className="flex items-center space-x-5 justify-center">
-    //         <div className="flex gap-2 items-center">
-    //           <PhoneIcon className="hover:text-[#F7AB0A] hover:dark:text-[#3b82f680] h-7 w-7 animate-pulse cursor-pointer" />
-    //           {' | '}
-    //           <WhatsappIcon className="text-[#25D366] ml-1 bg-white rounded-md h-7 w-7 animate-pulse cursor-pointer" />
-    //         </div>
-    //         <p className="text-2xl">+65 8506 7073</p>
-    //       </div>
-
-    //       <div className="flex items-center space-x-5 justify-center">
-    //         <EnvelopeIcon className="hover:text-[#F7AB0A] hover:dark:text-[#3b82f680] h-7 w-7 animate-pulse cursor-pointer" />
-    //         <p className="text-2xl">waylonago@gmail.com</p>
-    //       </div>
-
-    //       {/* <form
-    //         onSubmit={handleSubmit(onSubmit)}
-    //         className="flex flex-col space-y-2 w-fit mx-auto"
-    //       >
-    //         <div className="flex space-x-2">
-    //           <input
-    //             {...register('name')}
-    //             plaName="contactInput"
-    //           type="text"
-    //         />
-
-    //         <textarea
-    //           {...register('message')}
-    //           placeholder="Message"
-    //           className="contactInput"
-    //         />
-    //         <button
-    //           type="submit"
-    //           className="bg-[#F7AB0A]/50 dark:bg-[#3b82f680]/50  hover:bg-[#F7AB0A]/80 dark:hover:bg-[#3b82f680]/80 py-5 px-10 rounded-md font-bold text-lg"
-    //         >
-    //           Submit
-    //         </button>
-    //       </form> */}
-    //     </div>
-    //   </div>
-    // </div>ssName="contactInput"
-    //             type="text"
-    //           />
-    //           <input
-    //             {...register('email')}
-    //             placeholder="Email"
-    //             className="contactInput"
-    //             type="email"
-    //           />
-    //         </div>
-
-    //         <input
-    //           {...register('subject')}
-    //           placeholder="Subject"
-    //           className="contactInput"
-    //           type="text"
-    //         />
-
-    //         <textarea
-    //           {...register('message')}
-    //           placeholder="Message"
-    //           className="contactInput"
-    //         />
-    //         <button
-    //           type="submit"
-    //           className="bg-[#F7AB0A]/50 dark:bg-[#3b82f680]/50  hover:bg-[#F7AB0A]/80 dark:hover:bg-[#3b82f680]/80 py-5 px-10 rounded-md font-bold text-lg"
-    //         >
-    //           Submit
-    //         </button>
-    //       </form> */}
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
 
