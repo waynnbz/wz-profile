@@ -2,6 +2,10 @@ import React from 'react';
 import { BsPhoneFill as PhoneIcon } from 'react-icons/bs';
 import { FaEnvelope as EnvelopeIcon } from 'react-icons/fa';
 import { RiWhatsappFill as WhatsappIcon } from 'react-icons/ri';
+import { RxLinkedinLogo as LinkedInIcon } from 'react-icons/rx';
+import { SiTopcoder as TopCoderIcon } from 'react-icons/si';
+import { RxGithubLogo as GithubIcon } from 'react-icons/rx';
+
 import { useForm, SubmitHandler } from 'react-hook-form';
 import Image from 'next/image';
 
@@ -37,19 +41,52 @@ function Contact({ darker }: Props) {
         </div>
         <div className="flex justify-center items-lef space-x-5">
           <div className="flex gap-2 items-center">
-            <PhoneIcon className="text-[#F7AB0A] dark:text-[#3b82f680] h-7 w-7 animate-pulse" />
+            <PhoneIcon className="h-7 w-7 animate-pulse" />
             {' | '}
             <WhatsappIcon className="text-[#25D366] ml-1 bg-white rounded-md h-7 w-7 animate-pulse" />
           </div>
           <p className="text-2xl">+65 8506 7073</p>
         </div>
 
-        <div className="flex justify-center items-center space-x-5">
-          <EnvelopeIcon className="text-[#F7AB0A] dark:text-[#3b82f680] h-7 w-7 animate-pulse" />
+        <div
+          onClick={() => {
+            window.open(`mailto:waylonago@gmail.com`);
+          }}
+          className="flex justify-center items-center space-x-5 cursor-pointer hover:text-[#F7AB0A] hover:dark:text-[#3b82f680]"
+        >
+          <EnvelopeIcon className="h-7 w-7 animate-pulse" />
           <p className="text-2xl">waylonago@gmail.com</p>
         </div>
 
-        <form
+        <div className="w-full h-0.5 bg-slate-400"></div>
+
+        <div className="flex gap-12 text-1xl md:text-2xl xl:text-4xl font-bold font-CircularStd">
+          let{"'"}s connect:
+          <div className="flex gap-8 items-center text-lg font-normal font-sans">
+            <LinkedInIcon
+              onClick={() => {
+                window.open(`https://www.linkedin.com/in/wpzeng`);
+              }}
+              className="hover:text-[#F7AB0A] hover:dark:text-[#3b82f680] h-9 w-9 animate-pulse cursor-pointer"
+            />{' '}
+            {' | '}
+            <GithubIcon
+              onClick={() => {
+                window.open(`https://github.com/waynnbz`);
+              }}
+              className="hover:text-[#F7AB0A] hover:dark:text-[#3b82f680] h-9 w-9 animate-pulse cursor-pointer"
+            />{' '}
+            {' | '}
+            <TopCoderIcon
+              onClick={() => {
+                window.open(`https://www.topcoder.com/members/waynn`);
+              }}
+              className="hover:text-[#F7AB0A] hover:dark:text-[#3b82f680] h-9 w-9 animate-pulse cursor-pointer"
+            />
+          </div>
+        </div>
+
+        {/* <form
           onSubmit={handleSubmit(onSubmit)}
           className="flex flex-col space-y-2 w-auto md:w-fit mx-auto mt-8"
         >
@@ -86,7 +123,7 @@ function Contact({ darker }: Props) {
           >
             Submit
           </button>
-        </form>
+        </form> */}
       </div>
 
       <div className="relative w-full lg:w-1/2 h-full h-min-2/3">
@@ -119,15 +156,15 @@ function Contact({ darker }: Props) {
     //     <div className="space-y-10">
     //       <div className="flex items-center space-x-5 justify-center">
     //         <div className="flex gap-2 items-center">
-    //           <PhoneIcon className="text-[#F7AB0A] dark:text-[#3b82f680] h-7 w-7 animate-pulse" />
+    //           <PhoneIcon className="hover:text-[#F7AB0A] hover:dark:text-[#3b82f680] h-7 w-7 animate-pulse cursor-pointer" />
     //           {' | '}
-    //           <WhatsappIcon className="text-[#25D366] ml-1 bg-white rounded-md h-7 w-7 animate-pulse" />
+    //           <WhatsappIcon className="text-[#25D366] ml-1 bg-white rounded-md h-7 w-7 animate-pulse cursor-pointer" />
     //         </div>
     //         <p className="text-2xl">+65 8506 7073</p>
     //       </div>
 
     //       <div className="flex items-center space-x-5 justify-center">
-    //         <EnvelopeIcon className="text-[#F7AB0A] dark:text-[#3b82f680] h-7 w-7 animate-pulse" />
+    //         <EnvelopeIcon className="hover:text-[#F7AB0A] hover:dark:text-[#3b82f680] h-7 w-7 animate-pulse cursor-pointer" />
     //         <p className="text-2xl">waylonago@gmail.com</p>
     //       </div>
 
