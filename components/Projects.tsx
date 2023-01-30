@@ -13,7 +13,7 @@ function Projects({ darker }: Props) {
       description:
         'Reimagining the online banking experience with video call service, secure login, and modern interface',
       imageLinks: [
-        '/Projects/BankDemo/3-call-self.png',
+        '/Projects/BankDemo/3-call.png',
         '/Projects/BankDemo/2-findSession.png',
         '/Projects/BankDemo/1-login.png',
       ],
@@ -41,7 +41,7 @@ function Projects({ darker }: Props) {
       title: 'Food Deliver',
       projectType: 'Personal',
       description: 'A cloud-driven cross-platform solution for local food hunt',
-      imageLinks: ['/Projects/FoodDemo/FoodDelivery.png'],
+      imageLinks: ['/Projects/FoodDemo/FoodAnimation.mp4'],
       vertical: false,
       video: true,
       bgColor: 'bg-[#E6EAEA]/75',
@@ -52,7 +52,7 @@ function Projects({ darker }: Props) {
       projectType: 'College',
       description:
         'A treasure-finding adventure game with bots that might outsmart you',
-      imageLinks: ['/Projects/IceManDemo/IceMan.png'],
+      imageLinks: ['/Projects/IceManDemo/IceManAnimation.mp4'],
       vertical: false,
       video: true,
       bgColor: 'bg-[#91D1A8]/75',

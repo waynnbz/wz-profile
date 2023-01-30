@@ -45,15 +45,16 @@ function Project({
             muted
             onMouseOver={event => event.currentTarget.play()}
             onMouseOut={event => event.currentTarget.pause()}
-            className="hover:scale-105 hover:shadow-lg rounded-xl transition-transformation duration-500"
+            className=" w-fit h-5/6 bg-red-300
+            hover:scale-105 hover:shadow-lg rounded-xl transition-transformation duration-500"
           >
-            <source src="/burning_computer.mp4" />
+            <source src={imageLinks[0]} />
           </video>
         ) : (
           imageLinks.map((image, index) => (
             <div
               key={index}
-              className={`relative ${vertical ? 'w-1/3 h-4/6 ' : 'w-3/5 h-2/5 '}`}
+              className={`relative ${vertical ? 'w-1/3 h-2/3 ' : 'w-3/5 h-2/5 '}`}
             >
               <Image
                 src={image}
