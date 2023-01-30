@@ -42,7 +42,7 @@ function Projects({ darker }: Props) {
       projectType: 'Personal',
       description: 'A cloud-driven cross-platform solution for local food hunt',
       imageLinks: ['/Projects/FoodDemo/FoodAnimation.mp4'],
-      vertical: false,
+      vertical: true,
       video: true,
       bgColor: 'bg-[#E6EAEA]/80',
     },
