@@ -46,7 +46,7 @@ function Project({
             onMouseOver={event => event.currentTarget.play()}
             onMouseOut={event => event.currentTarget.pause()}
             className=" w-fit h-5/6 bg-red-300
-            hover:scale-105 hover:shadow-lg rounded-xl transition-transformation duration-500"
+            hover:scale-110 hover:shadow-lg rounded-xl transition-transformation duration-500"
           >
             <source src={imageLinks[0]} />
           </video>
@@ -60,7 +60,7 @@ function Project({
                 src={image}
                 alt="image 1"
                 fill
-                className={`object-cover object-center hover:object-contain rounded-md hover:scale-[1.54] hover:z-40 hover:shadow transition duration-700
+                className={`object-cover object-center hover:overflow-visible rounded-md hover:scale-[1.54] hover:z-40 hover:shadow transition duration-700
               ${
                 index === 0 &&
                 `${

@@ -19,7 +19,7 @@ function About({ darker }: Props) {
       <div className="lg:col-span-2 flex relative justify-center text-center rounded-lg overflow-hidden">
         {/* <Image src="/about.png" alt="about me pic" fill /> */}
         <video loop autoPlay muted>
-          <source src="/burning_computer.mp4" type="video/mp4" />
+          <source src="/CompressedBurningComputer.mp4" type="video/mp4" />
         </video>
       </div>
 
