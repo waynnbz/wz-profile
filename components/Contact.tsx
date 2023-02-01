@@ -29,9 +29,9 @@ function Contact({ darker }: Props) {
   return (
     <div
       id="contact"
-      className={`flex flex-col relative h-screen lg:gap-32 items-center justify-between text-left
+      className={`flex flex-col relative h-[720px] lg:gap-32 items-center justify-between text-left
     lg:flex-row 
-    py-24 lg:py-48
+    py-24 lg:py-32
     xl:px-64 md:px-32 sm:px-16 px-8 ${darker && 'darker'}
     `}
     >
@@ -126,12 +126,12 @@ function Contact({ darker }: Props) {
         </form> */}
       </div>
 
-      <div className="relative w-full lg:w-1/2 h-full h-min-2/3">
+      <div className="relative w-1/2 lg:w-1/2 h-full h-min-2/3">
         <Image
           src="/contact.png"
           alt="contact image"
           fill
-          className="object-contain"
+          className="object-cover"
         />
       </div>
     </div>

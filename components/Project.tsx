@@ -40,7 +40,7 @@ function Project({
           vertical ? 'flex-row-reverse' : 'flex-col'
         }  ${bgColor} shadow-md shadow-gray-300 dark:shadow-gray-600
         overflow-hidden 
-        hover:ring-2 hover:dark:ring-brand-blue/30 hover:ring-brand-yellow/30
+        hover:ring-2 dark:hover:ring-4 hover:dark:ring-brand-blue/50 hover:ring-brand-yellow/50
       `}
       >
         {video ? (
@@ -48,6 +48,8 @@ function Project({
           <video
             loop
             muted
+            // autoPlay
+            playsInline
             onMouseOver={event => event.currentTarget.play()}
             onMouseOut={event => event.currentTarget.pause()}
             className={`w-fit ${
