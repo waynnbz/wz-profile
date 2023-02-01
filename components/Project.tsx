@@ -56,8 +56,8 @@ function Project({
             onMouseOver={event => event.currentTarget.play()}
             onMouseOut={event => event.currentTarget.pause()}
             className={`w-fit ${
-              vertical ? 'h-5/6' : 'h-4/6 md:h-5/6'
-            } hover:z-20
+              vertical ? 'h-5/6' : 'h-fit max-h-[420px]'
+            } z-20 opacity-0 md:opacity-100 hover:opacity-100
             hover:scale-110 hover:shadow-lg hover:shadow-slate-500 rounded-xl transition-transformation duration-500`}
           >
             <source src={imageLinks[0]} />
@@ -74,7 +74,7 @@ function Project({
                 src={image}
                 alt="image 1"
                 fill
-                className={`object-cover object-center hover:shadow-lg hover:shadow-slate-500 rounded-md hover:scale-[1.7] hover:z-40 transition duration-700
+                className={`object-contain md:object-cover object-center shadow-none md:hover:shadow-lg hover:shadow-slate-500 rounded-md hover:scale-[1.7] hover:z-40 transition duration-700
               ${
                 index === 0 &&
                 `${
