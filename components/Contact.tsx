@@ -29,9 +29,9 @@ function Contact({ darker }: Props) {
   return (
     <div
       id="contact"
-      className={`flex flex-col relative h-[720px] lg:gap-32 items-center justify-between text-left
+      className={`flex flex-col relative h-[720px] gap-8 lg:gap-32 items-center justify-between text-left
     lg:flex-row 
-    py-24 lg:py-32
+    py-24 lg:py-36
     xl:px-64 md:px-32 sm:px-16 px-8 ${darker && 'darker'}
     `}
     >
@@ -63,23 +63,23 @@ function Contact({ darker }: Props) {
         <div className="flex flex-col text-center whitespace-nowrap md:text-left md:flex-row gap-6 md:gap-12 text-2xl xl:text-4xl font-bold font-CircularStd">
           let{"'"}s connect:
           <div className="flex gap-8 items-center text-lg font-normal font-sans">
-            <LinkedInIcon
-              onClick={() => {
-                window.open(`https://www.linkedin.com/in/wpzeng`);
-              }}
-              className="hover:text-[#F7AB0A] hover:dark:text-[#3b82f680] h-9 w-9 animate-pulse cursor-pointer"
-            />{' '}
-            {' | '}
             <GithubIcon
               onClick={() => {
                 window.open(`https://github.com/waynnbz`);
               }}
               className="hover:text-[#F7AB0A] hover:dark:text-[#3b82f680] h-9 w-9 animate-pulse cursor-pointer"
-            />{' '}
+            />
             {' | '}
             <TopCoderIcon
               onClick={() => {
                 window.open(`https://www.topcoder.com/members/waynn`);
+              }}
+              className="hover:text-[#F7AB0A] hover:dark:text-[#3b82f680] h-9 w-9 animate-pulse cursor-pointer"
+            />
+            {' | '}
+            <LinkedInIcon
+              onClick={() => {
+                window.open(`https://www.linkedin.com/in/wpzeng`);
               }}
               className="hover:text-[#F7AB0A] hover:dark:text-[#3b82f680] h-9 w-9 animate-pulse cursor-pointer"
             />
@@ -131,7 +131,7 @@ function Contact({ darker }: Props) {
           src="/contact.png"
           alt="contact image"
           fill
-          className="object-cover"
+          className="object-contain scale-150"
         />
       </div>
     </div>

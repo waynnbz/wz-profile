@@ -1,5 +1,6 @@
 import Image from 'next/image';
-// import { IoPlayForward as PlayIcon } from 'react-icons/io5';
+import { useState } from 'react';
+import { IoPlayForward as PlayIcon } from 'react-icons/io5';
 // import {
 //   RxDoubleArrowLeft as LeftArrowIcon,
 //   RxDoubleArrowRight as RightArrowIcon,
@@ -26,6 +27,8 @@ function Project({
   video,
   bgColor,
 }: Props) {
+  const [play, setPlay] = useState(true);
+
   return (
     <div
       className={`flex flex-col justify-start items-center text-center gap-8
@@ -90,13 +93,13 @@ function Project({
             </div>
           ))
         )}
-        {/* {video ? (
-          <div className="absolute top-1/2 z-10">
-            <PlayIcon  className='text-6xl text-brand-yellow/60 dark:text-brand-blue/50'/>
+        {video ? (
+          <div className="absolute top-2/5 z-10">
+            <PlayIcon className="text-5xl text-brand-yellow/60 dark:text-brand-blue/50" />
           </div>
         ) : (
           <></>
-        )} */}
+        )}
       </div>
 
       {/* Text */}
