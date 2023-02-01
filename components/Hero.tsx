@@ -125,12 +125,12 @@ function Hero({ darker }: Props) {
         </Link>
       </div>
 
-      <div className="flex relative w-3/5 min-w-[238px] sm:w-2/5 h-3/5 overflow-visible">
+      <div className="flex relative w-3/5 min-w-[238px] sm:w-2/5 h-3/5">
         <Image
           src="/web3Coder.png"
           alt="web3 coder png"
           fill
-          className="object-cover object-top overflow-visible"
+          className="object-contain md:object-cover object-top overflow-visible"
         />
       </div>
     </div>

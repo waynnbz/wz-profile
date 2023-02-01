@@ -40,7 +40,7 @@ function Project({
       <div
         className={`relative w-full h-5/6 bg rounded-[28px]
         flex justify-center items-center p-8  ${
-          vertical ? 'flex-row-reverse' : 'flex-col'
+          vertical ? 'flex-row-reverse' : 'flex-col py-28 lg:py-8'
         }  ${bgColor} shadow-md shadow-gray-300 dark:shadow-gray-600
         overflow-hidden 
         hover:ring-2 dark:hover:ring-4 hover:dark:ring-brand-blue/50 hover:ring-brand-yellow/50
@@ -58,7 +58,7 @@ function Project({
             className={`w-fit ${
               vertical ? 'h-5/6' : 'h-fit max-h-[420px]'
             } z-20 opacity-0 md:opacity-100 hover:opacity-100
-            hover:scale-110 hover:shadow-lg hover:shadow-slate-500 rounded-xl transition-transformation duration-500`}
+            hover:scale-110 rounded-xl transition-transformation duration-500`}
           >
             <source src={imageLinks[0]} />
           </video>
@@ -74,19 +74,19 @@ function Project({
                 src={image}
                 alt="image 1"
                 fill
-                className={`object-contain md:object-cover object-center shadow-none md:hover:shadow-lg hover:shadow-slate-500 rounded-md hover:scale-[1.7] hover:z-40 transition duration-700
+                className={`object-contain object-center rounded-md hover:scale-[1.7] hover:z-40 transition duration-700
               ${
                 index === 0 &&
                 `${
                   vertical ? 'hover:-translate-x-14' : 'hover:translate-y-14'
-                } blur-none hover:blur-none`
+                }`
               }
               ${index === 1 && 'scale-[1.4] z-10'}
               ${
                 index === 2 &&
                 `${
                   vertical ? 'hover:translate-x-14' : 'hover:-translate-y-14'
-                } blur-none hover:blur-none`
+                }`
               }
             `}
               />
@@ -95,7 +95,7 @@ function Project({
         )}
         {video ? (
           <div className="absolute top-2/5 z-10">
-            <PlayIcon className="text-5xl text-brand-yellow/60 dark:text-brand-blue/50" />
+            <PlayIcon className="text-5xl text-brand-yellow/80 dark:text-brand-blue/80" />
           </div>
         ) : (
           <></>
