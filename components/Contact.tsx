@@ -6,7 +6,7 @@ import { RxLinkedinLogo as LinkedInIcon } from 'react-icons/rx';
 import { SiTopcoder as TopCoderIcon } from 'react-icons/si';
 import { RxGithubLogo as GithubIcon } from 'react-icons/rx';
 
-import { useForm, SubmitHandler } from 'react-hook-form';
+// import { useForm, SubmitHandler } from 'react-hook-form';
 import Image from 'next/image';
 
 type Inputs = {
