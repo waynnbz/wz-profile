@@ -1,10 +1,6 @@
-import { useTransition, animated } from '@react-spring/web';
-import React, { useCallback, useEffect, useRef, useState } from 'react';
-import { useTheme } from '../utils/theme';
 import Image from 'next/image';
 import { Link } from 'react-scroll';
 import { AiOutlineSwapRight as SwapRightIcon } from 'react-icons/ai';
-// import { clearTimeout } from 'timers';
 
 type Props = {
   darker: boolean;
