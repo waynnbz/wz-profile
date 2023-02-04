@@ -54,18 +54,6 @@ function Header({ darker }: Props) {
           </li> */}
           <li>
             <ScrollLink
-              to="about"
-              smooth={true}
-              duration={500}
-              spy={true}
-              // offset={-80}
-              className="cursor-pointer hidden md:flex"
-            >
-              About Me
-            </ScrollLink>
-          </li>
-          <li>
-            <ScrollLink
               to="projects"
               smooth={true}
               duration={500}
@@ -74,6 +62,18 @@ function Header({ darker }: Props) {
               className="cursor-pointer hidden md:flex"
             >
               Projects
+            </ScrollLink>
+          </li>
+          <li>
+            <ScrollLink
+              to="about"
+              smooth={true}
+              duration={500}
+              spy={true}
+              // offset={-80}
+              className="cursor-pointer hidden md:flex"
+            >
+              About Me
             </ScrollLink>
           </li>
           <li>

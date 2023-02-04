@@ -70,7 +70,7 @@ function Projects({ darker }: Props) {
         Projects
       </h3>
 
-      <div className="flex flex-col lg:grid lg:grid-cols-2 lg:gap-y-0 gap-x-32 gap-y-16 justify-items-center">
+      <div className="flex flex-col lg:grid lg:grid-cols-2 gap-x-32 lg:gap-y-0 gap-y-16 justify-items-center">
         {projects.map(project => (
           <Project
             key={project.id}

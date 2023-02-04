@@ -27,9 +27,9 @@ export default function Home() {
 
         <Hero darker={true} />
 
-        <About darker={false} />
+        <Projects darker={false} />
 
-        <Projects darker={true} />
+        <About darker={true} />
 
         {/* <Skills /> */}
 
