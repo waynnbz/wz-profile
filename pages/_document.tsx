@@ -30,7 +30,7 @@ export default function Document() {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
         <link
-          href="https://fonts.googleapis.com/css2?family=Poppins&family=League+Spartan&family=Roboto&family=Rubik:wght@300;400;500;600;700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=League+Spartan&family=Roboto&family=Rubik:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </Head>
