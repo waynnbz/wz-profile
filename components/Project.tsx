@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { useState } from 'react';
 import { IoPlayForward as PlayIcon } from 'react-icons/io5';
+import { motion } from 'framer-motion';
 // import {
 //   RxDoubleArrowLeft as LeftArrowIcon,
 //   RxDoubleArrowRight as RightArrowIcon,
@@ -14,7 +15,7 @@ type Props = {
   imageLinks: string[];
   vertical: boolean;
   video: boolean;
-  bgColor: string;
+  bgColors: string[];
 };
 
 function Project({
@@ -25,23 +26,32 @@ function Project({
   imageLinks,
   vertical,
   video,
-  bgColor,
+  bgColors,
 }: Props) {
   const [play, setPlay] = useState(false);
 
   return (
-    <div
+    <motion.div
       className={`flex flex-col justify-start items-center text-center gap-8
        w-full h-[540px] md:h-[780px]
       ${id % 2 != 0 && 'lg:mt-32'} group
       `}
+      initial={{
+        x: id % 2 === 0 ? -500 : 500,
+      }}
+      whileInView={{
+        x: 0,
+      }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.4 }}
     >
       {/* Image/Video */}
       <div
         className={`relative w-full h-3/4 md:h-5/6 bg rounded-[28px]
         flex justify-center items-center p-8  ${
           vertical ? 'flex-row-reverse' : 'flex-col'
-        }  ${bgColor} shadow-md shadow-gray-300 dark:shadow-gray-600
+        } bg-gradient-to-bl ${bgColors[0]} ${bgColors[1]}
+        shadow-md shadow-gray-300 dark:shadow-gray-600
         overflow-hidden 
         group-hover:ring-2 dark:group-hover:ring-brand-blue/50 group-hover:ring-brand-yellow/50
       `}
@@ -64,29 +74,34 @@ function Project({
           </video>
         ) : (
           imageLinks.map((image, index) => (
-            <div
+            <motion.div
               key={index}
               className={`relative  ${
                 vertical ? 'w-[200px] h-[321px] ' : 'w-3/5 h-2/5 '
-              }`}
+              }
+              `}
+              whileInView={{
+                zIndex: index === 1 ? 20 : 10,
+                scale: index === 1 ? 1.4 : 1,
+              }}
+              // viewport={{ once: true }}
+              whileHover={{
+                scale: 1.7,
+                y: !vertical && index != 1 ? (index === 0 ? 45 : -45) : 0,
+                x: vertical && index != 1 ? (index === 0 ? -45 : 45) : 0,
+                zIndex: 30,
+              }}
+              transition={{ type: 'spring', damping: 20, stiffness: 200 }}
             >
               <Image
                 src={image}
                 alt="image 1"
                 fill
-                className={`object-contain object-center rounded-md hover:scale-[1.7] hover:z-40 transition duration-700
-              ${
-                index === 0 &&
-                `${vertical ? 'hover:-translate-x-14' : 'hover:translate-y-14'}`
-              }
-              ${index === 1 && 'scale-[1.4] z-10'}
-              ${
-                index === 2 &&
-                `${vertical ? 'hover:translate-x-14' : 'hover:-translate-y-14'}`
-              }
+                className={`object-contain object-center rounded-md 
+                
             `}
               />
-            </div>
+            </motion.div>
           ))
         )}
         {video ? (
@@ -110,7 +125,7 @@ function Project({
           {description}
         </p>
       </div>
-    </div>
+    </motion.div>
     // <div className="flex flex-row relative justify-center items-center">
     //   {/* <div
     //     className={`text-8xl absolute top-[40%] left-[15%] text-[#F7AB0A]/30 dark:text-[#3b82f680] hover:scale-110 hover:text-[#F7AB0A]/70 dark:hover:text-[#3b82f680]/70 hover:cursor-pointer animate-pulse duration-100

@@ -14,7 +14,7 @@ export default function Home() {
   const { isDarkMode } = useTheme();
 
   return (
-    <div className={`${isDarkMode && 'dark'}`}>
+    <div className={`${isDarkMode && 'dark'} overflow-x-hidden`}>
       <Head>
         <title>WP ZENG</title>
       </Head>

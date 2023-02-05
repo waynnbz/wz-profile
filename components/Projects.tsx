@@ -18,7 +18,8 @@ const projects = [
     ],
     vertical: false,
     video: false,
-    bgColor: 'bg-[#B6D0ED]/80',
+    bgColorFrom: 'from-[#93CBF1]/80',
+    bgColorTo: 'to-[#ABC9E9]/50',
   },
   {
     id: 1,
@@ -33,7 +34,8 @@ const projects = [
     ],
     vertical: true,
     video: false,
-    bgColor: 'bg-[#CEAFD9]/80',
+    bgColorFrom: 'from-[#EEACDC]/80',
+    bgColorTo: 'to-[#F13C77]/40',
   },
   {
     id: 2,
@@ -43,7 +45,8 @@ const projects = [
     imageLinks: ['/Projects/FoodDemo/FoodAnimation.mp4'],
     vertical: true,
     video: true,
-    bgColor: 'bg-[#E6EAEA]/80',
+    bgColorFrom: 'from-[#E6EAEA]/90',
+    bgColorTo: 'to-[#E6EAEA]/50',
   },
   {
     id: 3,
@@ -54,7 +57,8 @@ const projects = [
     imageLinks: ['/Projects/IceManDemo/IceManAnimation.mp4'],
     vertical: false,
     video: true,
-    bgColor: 'bg-[#91D1A8]/80',
+    bgColorFrom: 'from-[#CAEFD7]/80',
+    bgColorTo: 'to-[#91D1A8]/50',
   },
 ];
 
@@ -81,7 +85,7 @@ function Projects({ darker }: Props) {
             imageLinks={project.imageLinks}
             vertical={project.vertical}
             video={project.video}
-            bgColor={project.bgColor}
+            bgColors={[project.bgColorFrom, project.bgColorTo]}
           />
         ))}
       </div>

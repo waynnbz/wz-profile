@@ -2,12 +2,22 @@ import Image from 'next/image';
 import { Link } from 'react-scroll';
 import { AiOutlineSwapRight as SwapRightIcon } from 'react-icons/ai';
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
+import { useWindowSize } from 'react-use';
 
 type Props = {
   darker: boolean;
 };
 
 function Hero({ darker }: Props) {
+  const { width } = useWindowSize();
+  const isMobile = width < 1200;
+  // const [isMobile, setIsMobile] = useState(width < 768);
+
+  // useEffect(() => {
+  //   setIsMobile(width < 768);
+  // }, [width]);
+
   return (
     <div
       id="hero"
@@ -67,8 +77,8 @@ function Hero({ darker }: Props) {
         50vw"
         alt="web3 coder png"
         className="origin-bottom-right object-contain md:object-cover object-top overflow-visible w-3/5 min-w-[238px] sm:w-2/5 h-3/5"
-        initial={{ x: 500 }}
-        whileInView={{ x: -50 }}
+        initial={{ x: isMobile ? 0 : 500 }}
+        whileInView={{ x: 0 }}
         animate={{
           rotate: [0, 5, -1, 8, -3, 4, 0],
         }}
@@ -82,10 +92,10 @@ function Hero({ darker }: Props) {
         }}
         drag
         dragConstraints={{
-          top: -200,
-          left: -200,
-          right: 200,
-          bottom: 200,
+          top: isMobile ? -50 : -200,
+          left: isMobile ? -50 : -200,
+          right: isMobile ? 50 : 200,
+          bottom: isMobile ? 50 : 200,
         }}
         whileDrag={{
           scale: 0.8,
