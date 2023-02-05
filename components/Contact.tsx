@@ -141,10 +141,18 @@ function Contact({ darker }: Props) {
       </motion.div>
 
       <motion.div
-        initial={{
-          opacity: 0,
-        }}
+        initial={
+          isMobile
+            ? {
+                x: 0,
+                opacity: 0,
+              }
+            : {
+                x: 500,
+              }
+        }
         whileInView={{
+          x: 0,
           opacity: 1,
         }}
         viewport={{ once: true }}

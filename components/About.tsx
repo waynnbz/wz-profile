@@ -27,10 +27,18 @@ function About({ darker }: Props) {
       id="about"
     >
       <motion.div
-        initial={{
-          opacity: 0,
-        }}
+        initial={
+          isMobile
+            ? {
+                opacity: 0,
+                x: 0,
+              }
+            : {
+                x: -500,
+              }
+        }
         whileInView={{
+          x: 0,
           opacity: 1,
         }}
         viewport={{ once: true }}

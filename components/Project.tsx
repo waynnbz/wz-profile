@@ -31,7 +31,7 @@ function Project({
 }: Props) {
   const { width } = useWindowSize();
   const isMobile = width < 1200;
-  const [play, setPlay] = useState(false);
+  // const [play, setPlay] = useState(false);
 
   return (
     <motion.div
