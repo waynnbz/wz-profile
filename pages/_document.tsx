@@ -59,6 +59,17 @@ export default function Document() {
         />
 
         <link
+          rel="preload"
+          as="video/mp4"
+          href="/Projects/FoodDemo/FoodAnimation.mp4"
+        />
+        <link
+          rel="preload"
+          as="video/mp4"
+          href="/Projects/IceManDemo/IceManAnimation.mp4"
+        />
+
+        <link
           href="https://fonts.googleapis.com/css2?family=League+Spartan&family=Roboto&family=Rubik:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />

@@ -92,17 +92,17 @@ function Hero({ darker }: Props) {
           x: { duration: 1 },
           y: { duration: 1 },
         }}
-        drag={isMobile ? false : true}
-        // drag
-        dragConstraints={{
-          top: isMobile ? -50 : -200,
-          left: isMobile ? -50 : -200,
-          right: isMobile ? 50 : 200,
-          bottom: isMobile ? 50 : 200,
-        }}
-        whileTap={{
-          scale: 0.8,
-        }}
+        // drag={isMobile ? false : true}
+        // // drag
+        // dragConstraints={{
+        //   top: isMobile ? -50 : -200,
+        //   left: isMobile ? -50 : -200,
+        //   right: isMobile ? 50 : 200,
+        //   bottom: isMobile ? 50 : 200,
+        // }}
+        // whileTap={{
+        //   scale: 0.8,
+        // }}
       />
     </div>
   );

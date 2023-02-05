@@ -62,21 +62,47 @@ function Project({
       `}
       >
         {video ? (
-          <video
-            loop
-            muted
-            playsInline
-            onMouseEnter={event => event.currentTarget.play()}
-            onMouseLeave={event => event.currentTarget.pause()}
-            onClick={event => {
-              !play ? event.currentTarget.play() : event.currentTarget.pause();
-              setPlay(!play);
-            }}
-            className={`w-fit h-5/6 z-20 opacity-0 md:opacity-100 hover:opacity-100
-            hover:scale-110 rounded-2xl transition-transformation duration-500`}
-          >
-            <source src={imageLinks[0]} />
-          </video>
+          vertical ? (
+            <video
+              loop
+              muted
+              playsInline
+              autoPlay
+              // preload="none"
+              // onMouseEnter={event => event.currentTarget.play()}
+              // onMouseLeave={event => event.currentTarget.pause()}
+              // onClick={event => {
+              //   !play ? event.currentTarget.play() : event.currentTarget.pause();
+              //   setPlay(!play);
+              // }}
+              className={`w-fit h-5/6 z-20 hover:scale-110 rounded-2xl transition-transformation duration-500`}
+            >
+              <source
+                src="/Projects/FoodDemo/FoodAnimation.mp4"
+                type="video/mp4"
+              />
+            </video>
+          ) : (
+            <video
+              loop
+              muted
+              playsInline
+              autoPlay
+              // preload="none"
+              // onMouseEnter={event => event.currentTarget.play()}
+              // onMouseLeave={event => event.currentTarget.pause()}
+              // onClick={event => {
+              //   !play ? event.currentTarget.play() : event.currentTarget.pause();
+              //   setPlay(!play);
+              // }}
+              className={`w-fit h-5/6 hover:scale-110 rounded-2xl transition-transformation duration-500`}
+            >
+              <source
+                src="/Projects/IceManDemo/IceManAnimation.mp4"
+                type="video/mp4"
+              />
+            </video>
+          )
         ) : (
           imageLinks.map((image, index) => (
             <motion.div
@@ -123,13 +149,13 @@ function Project({
             </motion.div>
           ))
         )}
-        {video ? (
+        {/* {video ? (
           <div className="absolute top-2/5 z-10">
             <PlayIcon className="text-5xl text-brand-yellow/80 dark:text-brand-blue/80" />
           </div>
         ) : (
           <></>
-        )}
+        )} */}
       </div>
 
       {/* Text */}
