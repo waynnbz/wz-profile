@@ -33,7 +33,7 @@ export default function Document() {
         <link
           rel="preload"
           as="font"
-          href="../public/fonts/VisueltPro/VisueltPro-Bold.woff2"
+          href="/fonts/VisueltPro/VisueltPro-Bold.woff2"
           type="font/woff2"
           crossOrigin="anonymous"
         />
@@ -41,10 +41,12 @@ export default function Document() {
         <link
           rel="preload"
           as="font"
-          href="../public/fonts/VisueltPro/VisueltPro-Light.woff2"
+          href="/fonts/VisueltPro/VisueltPro-Light.woff2"
           type="font/woff2"
           crossOrigin="anonymous"
         />
+
+        <link rel="preload" as="image" href="/web3Coder.png" />
 
         <link
           href="https://fonts.googleapis.com/css2?family=League+Spartan&family=Roboto&family=Rubik:wght@300;400;500;600;700&display=swap"
