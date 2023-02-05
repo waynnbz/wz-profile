@@ -57,7 +57,14 @@ function Hero({ darker }: Props) {
 
       {/* eslint-disable @next/next/no-img-element */}
       <img
-        src="/web3Coder.png"
+        src="/web3Coder-lg.png"
+        srcSet="/web3Coder-sm.png 400w, 
+        /web3Coder-md.png 800w, 
+        /web3Coder-lg.png 1200w"
+        sizes="(max-width: 400px) 100vw, 
+       (max-width: 800px) 50vw, 
+       (max-width: 1200px) 33.3vw, 
+       1200px"
         alt="web3 coder png"
         className="object-contain md:object-cover object-top overflow-visible w-3/5 min-w-[238px] sm:w-2/5 h-3/5"
       />

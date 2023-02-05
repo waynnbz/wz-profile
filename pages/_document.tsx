@@ -46,7 +46,18 @@ export default function Document() {
           crossOrigin="anonymous"
         />
 
-        <link rel="preload" as="image" href="/web3Coder.png" />
+        <link
+          rel="preload"
+          as="image"
+          href="/web3Coder-lg.png"
+          imageSrcSet="/web3Coder-sm.png 400w, 
+        /web3Coder-md.png 800w, 
+        /web3Coder-lg.png 1200w"
+          imageSizes="(max-width: 400px) 100vw, 
+          (max-width: 800px) 50vw, 
+          (max-width: 1200px) 33.3vw, 
+          1200px"
+        />
 
         <link
           href="https://fonts.googleapis.com/css2?family=League+Spartan&family=Roboto&family=Rubik:wght@300;400;500;600;700&display=swap"
