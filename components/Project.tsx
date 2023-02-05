@@ -27,19 +27,19 @@ function Project({
   video,
   bgColor,
 }: Props) {
-  const [play, setPlay] = useState(true);
+  const [play, setPlay] = useState(false);
 
   return (
     <div
       className={`flex flex-col justify-start items-center text-center gap-8
-       w-full h-[640px] md:h-[780px]
+       w-full h-[540px] md:h-[780px]
       ${id % 2 != 0 && 'lg:mt-32'} group
       `}
     >
       {/* Image/Video */}
       <div
         className={`relative w-full h-3/4 md:h-5/6 bg rounded-[28px]
-        flex justify-center items-center p-10  ${
+        flex justify-center items-center p-8  ${
           vertical ? 'flex-row-reverse' : 'flex-col'
         }  ${bgColor} shadow-md shadow-gray-300 dark:shadow-gray-600
         overflow-hidden 
@@ -47,14 +47,16 @@ function Project({
       `}
       >
         {video ? (
-          // <div className=''>
           <video
             loop
             muted
-            // autoPlay
             playsInline
             onMouseOver={event => event.currentTarget.play()}
             onMouseOut={event => event.currentTarget.pause()}
+            onClick={event => {
+              play ? event.currentTarget.play() : event.currentTarget.pause();
+              setPlay(!play);
+            }}
             className={`w-fit h-5/6 z-20 opacity-0 md:opacity-100 hover:opacity-100
             hover:scale-110 rounded-2xl transition-transformation duration-500`}
           >
@@ -98,7 +100,9 @@ function Project({
 
       {/* Text */}
       <div className="flex flex-col items-center gap-2 px-4 md:px-8">
-        <h1 className="text-2xl md:text-4xl font-medium group-hover:border-b-4 w-fit dark:border-brand-blue/50 border-brand-yellow/50">{title}</h1>
+        <h1 className="text-2xl md:text-4xl font-medium group-hover:border-b-2 w-fit dark:border-brand-blue/50 border-brand-yellow/50">
+          {title}
+        </h1>
         <span className="text-[#A6A6A6] dark:text-gray-700 text-[20px] md:text-[24px] font-medium">
           {projectType}
         </span>
