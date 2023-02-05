@@ -29,6 +29,23 @@ export default function Document() {
         />
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
+
+        <link
+          rel="preload"
+          as="font"
+          href="../public/fonts/VisueltPro/VisueltPro-Bold.woff2"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
+        <link
+          rel="preload"
+          as="font"
+          href="../public/fonts/VisueltPro/VisueltPro-Light.woff2"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
+
         <link
           href="https://fonts.googleapis.com/css2?family=League+Spartan&family=Roboto&family=Rubik:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
