@@ -90,7 +90,7 @@ function Hero({ darker }: Props) {
           x: { duration: 1 },
           y: { duration: 1 },
         }}
-        drag
+        drag={isMobile ? false : true}
         dragConstraints={{
           top: isMobile ? -50 : -200,
           left: isMobile ? -50 : -200,

@@ -2,6 +2,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { IoPlayForward as PlayIcon } from 'react-icons/io5';
 import { motion } from 'framer-motion';
+import { useWindowSize } from 'react-use';
 // import {
 //   RxDoubleArrowLeft as LeftArrowIcon,
 //   RxDoubleArrowRight as RightArrowIcon,
@@ -28,6 +29,8 @@ function Project({
   video,
   bgColors,
 }: Props) {
+  const { width } = useWindowSize();
+  const isMobile = width < 1200;
   const [play, setPlay] = useState(false);
 
   return (
@@ -37,7 +40,7 @@ function Project({
       ${id % 2 != 0 && 'lg:mt-32'} group
       `}
       initial={{
-        x: id % 2 === 0 ? -500 : 500,
+        x: (id % 2 === 0 ? -500 : 500) / (isMobile ? 10 : 1),
       }}
       whileInView={{
         x: 0,
