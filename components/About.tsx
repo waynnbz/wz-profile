@@ -79,7 +79,7 @@ function About({ darker }: Props) {
               As a{' '}
               <RoughNotation
                 type="highlight"
-                color={isDarkMode ? '#692b3f' : "#f7a3be"}
+                color={isDarkMode ? "#422c57" : '#ccb1e3'}
                 animate={true}
                 multiline={true}
               >

@@ -43,7 +43,7 @@ function Project({
           vertical ? 'flex-row-reverse' : 'flex-col'
         }  ${bgColor} shadow-md shadow-gray-300 dark:shadow-gray-600
         overflow-hidden 
-        group-hover:ring-2 dark:group-hover:ring-4 dark:group-hover:ring-brand-blue/50 group-hover:ring-brand-yellow/50
+        group-hover:ring-2 dark:group-hover:ring-brand-blue/50 group-hover:ring-brand-yellow/50
       `}
       >
         {video ? (

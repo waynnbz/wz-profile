@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Link } from 'react-scroll';
 import { AiOutlineSwapRight as SwapRightIcon } from 'react-icons/ai';
+import { motion } from 'framer-motion';
 
 type Props = {
   darker: boolean;
@@ -56,7 +57,7 @@ function Hero({ darker }: Props) {
       </div>
 
       {/* eslint-disable @next/next/no-img-element */}
-      <img
+      <motion.img
         src="/web3Coder-lg.png"
         srcSet="/web3Coder-sm.png 480w, 
         /web3Coder-md.png 960w, 
@@ -65,7 +66,30 @@ function Hero({ darker }: Props) {
         (min-width: 991px) 50vw,
         50vw"
         alt="web3 coder png"
-        className="object-contain md:object-cover object-top overflow-visible w-3/5 min-w-[238px] sm:w-2/5 h-3/5"
+        className="origin-bottom-right object-contain md:object-cover object-top overflow-visible w-3/5 min-w-[238px] sm:w-2/5 h-3/5"
+        initial={{ x: 500 }}
+        whileInView={{ x: -50 }}
+        animate={{
+          rotate: [0, 5, -1, 8, -3, 4, 0],
+        }}
+        transition={{
+          repeat: Infinity,
+          repeatType: 'mirror',
+          duration: 10,
+          scale: { duration: 1 },
+          x: { duration: 1 },
+          y: { duration: 1 },
+        }}
+        drag
+        dragConstraints={{
+          top: -200,
+          left: -200,
+          right: 200,
+          bottom: 200,
+        }}
+        whileDrag={{
+          scale: 0.8,
+        }}
       />
     </div>
   );
