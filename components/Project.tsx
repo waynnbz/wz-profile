@@ -41,12 +41,14 @@ function Project({
       `}
       initial={{
         x: (id % 2 === 0 ? -500 : 500) / (isMobile ? 10 : 1),
+        opacity: 0,
       }}
       whileInView={{
         x: 0,
+        opacity: 1,
       }}
       viewport={{ once: true }}
-      transition={{ duration: 1.4 }}
+      transition={{ duration: 1 }}
     >
       {/* Image/Video */}
       <div
@@ -64,10 +66,10 @@ function Project({
             loop
             muted
             playsInline
-            onMouseOver={event => event.currentTarget.play()}
-            onMouseOut={event => event.currentTarget.pause()}
+            onMouseEnter={event => event.currentTarget.play()}
+            onMouseLeave={event => event.currentTarget.pause()}
             onClick={event => {
-              play ? event.currentTarget.play() : event.currentTarget.pause();
+              !play ? event.currentTarget.play() : event.currentTarget.pause();
               setPlay(!play);
             }}
             className={`w-fit h-5/6 z-20 opacity-0 md:opacity-100 hover:opacity-100
@@ -88,12 +90,26 @@ function Project({
                 scale: index === 1 ? 1.4 : 1,
               }}
               // viewport={{ once: true }}
-              whileHover={{
-                scale: 1.7,
-                y: !vertical && index != 1 ? (index === 0 ? 45 : -45) : 0,
-                x: vertical && index != 1 ? (index === 0 ? -45 : 45) : 0,
-                zIndex: 30,
-              }}
+              whileHover={
+                isMobile
+                  ? {}
+                  : {
+                      scale: 1.7,
+                      y: !vertical && index != 1 ? (index === 0 ? 45 : -45) : 0,
+                      x: vertical && index != 1 ? (index === 0 ? -45 : 45) : 0,
+                      zIndex: 30,
+                    }
+              }
+              whileTap={
+                isMobile
+                  ? {
+                      scale: 1.7,
+                      y: !vertical && index != 1 ? (index === 0 ? 45 : -45) : 0,
+                      x: vertical && index != 1 ? (index === 0 ? -45 : 45) : 0,
+                      zIndex: 30,
+                    }
+                  : {}
+              }
               transition={{ type: 'spring', damping: 20, stiffness: 200 }}
             >
               <Image

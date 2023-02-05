@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { Link } from 'react-scroll';
 import { AiOutlineSwapRight as SwapRightIcon } from 'react-icons/ai';
 import { motion } from 'framer-motion';
-import { useEffect, useState } from 'react';
 import { useWindowSize } from 'react-use';
 
 type Props = {
@@ -12,11 +11,6 @@ type Props = {
 function Hero({ darker }: Props) {
   const { width } = useWindowSize();
   const isMobile = width < 1200;
-  // const [isMobile, setIsMobile] = useState(width < 768);
-
-  // useEffect(() => {
-  //   setIsMobile(width < 768);
-  // }, [width]);
 
   return (
     <div
@@ -26,7 +20,15 @@ function Hero({ darker }: Props) {
       ${darker && 'darker'}
     `}
     >
-      <div
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.5 }}
         className="flex flex-col justify-center items-star font-VisueltPro
         text-3xl md:text-4xl xl:text-6xl leading-loose"
       >
@@ -64,7 +66,7 @@ function Hero({ darker }: Props) {
             View all works <SwapRightIcon className="scale-x-150" />
           </div>
         </Link>
-      </div>
+      </motion.div>
 
       {/* eslint-disable @next/next/no-img-element */}
       <motion.img
@@ -80,25 +82,25 @@ function Hero({ darker }: Props) {
         initial={{ x: isMobile ? 0 : 500 }}
         whileInView={{ x: 0 }}
         animate={{
-          rotate: [0, 5, -1, 8, -3, 4, 0],
+          rotate: [0, 3, 1, 2, -1, 2, 0],
         }}
         transition={{
           repeat: Infinity,
           repeatType: 'mirror',
           duration: 10,
-          scale: { duration: 1 },
+          scale: { duration: 0.4 },
           x: { duration: 1 },
           y: { duration: 1 },
         }}
-        // drag={isMobile ? false : true}
-        drag
+        drag={isMobile ? false : true}
+        // drag
         dragConstraints={{
           top: isMobile ? -50 : -200,
           left: isMobile ? -50 : -200,
           right: isMobile ? 50 : 200,
           bottom: isMobile ? 50 : 200,
         }}
-        whileDrag={{
+        whileTap={{
           scale: 0.8,
         }}
       />

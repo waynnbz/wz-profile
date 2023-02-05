@@ -5,9 +5,11 @@ import { RiWhatsappFill as WhatsappIcon } from 'react-icons/ri';
 import { RxLinkedinLogo as LinkedInIcon } from 'react-icons/rx';
 import { SiTopcoder as TopCoderIcon } from 'react-icons/si';
 import { RxGithubLogo as GithubIcon } from 'react-icons/rx';
+import { motion } from 'framer-motion';
 
 // import { useForm, SubmitHandler } from 'react-hook-form';
 import Image from 'next/image';
+import { useWindowSize } from 'react-use';
 
 type Inputs = {
   name: string;
@@ -21,6 +23,8 @@ type Props = {
 };
 
 function Contact({ darker }: Props) {
+  const { width } = useWindowSize();
+  const isMobile = width < 1200;
   // const { register, handleSubmit } = useForm<Inputs>();
   // const onSubmit: SubmitHandler<Inputs> = formData => {
   //   window.location.href = `mailto:waylonago@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message} (${formData.email})`;
@@ -35,7 +39,17 @@ function Contact({ darker }: Props) {
     xl:px-64 md:px-32 sm:px-16 px-8 ${darker && 'darker'}
     `}
     >
-      <div className="flex flex-col gap-6 md:gap-8 justify-center items-center lg:items-start">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="flex flex-col gap-6 md:gap-8 justify-center items-center lg:items-start"
+      >
         <div className="text-3xl md:text-4xl xl:text-6xl font-bold mb-4 font-CircularStd">
           Contact
         </div>
@@ -124,16 +138,33 @@ function Contact({ darker }: Props) {
             Submit
           </button>
         </form> */}
-      </div>
+      </motion.div>
 
-      <div className="relative w-1/2 lg:w-1/2 h-full h-min-2/3">
+      <motion.div
+        initial={
+          isMobile
+            ? {
+                opacity: 0,
+              }
+            : {
+                x: 500,
+              }
+        }
+        whileInView={{
+          x: 0,
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="relative w-1/2 lg:w-1/2 h-full h-min-2/3"
+      >
         <Image
           src="/contact.png"
           alt="contact image"
           fill
           className="object-contain scale-150"
         />
-      </div>
+      </motion.div>
     </div>
   );
 }

@@ -1,7 +1,9 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { RoughNotation, RoughNotationGroup } from 'react-rough-notation';
+import { motion } from 'framer-motion';
 import { useTheme } from '../utils/theme';
+import { useWindowSize } from 'react-use';
 
 type Props = {
   darker: boolean;
@@ -9,7 +11,9 @@ type Props = {
 
 function About({ darker }: Props) {
   const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: true });
-  const { isDarkMode} = useTheme();
+  const { isDarkMode } = useTheme();
+  const { width } = useWindowSize();
+  const isMobile = width < 1200;
 
   return (
     <div
@@ -22,14 +26,40 @@ function About({ darker }: Props) {
     `}
       id="about"
     >
-      <div className="lg:col-span-2 flex relative justify-center text-center rounded-lg overflow-hidden">
-        {/* <Image src="/about.png" alt="about me pic" fill /> */}
+      <motion.div
+        initial={
+          isMobile
+            ? {
+                opacity: 0,
+              }
+            : {
+                x: -500,
+              }
+        }
+        whileInView={{
+          x: 0,
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="lg:col-span-2 flex relative justify-center text-center rounded-lg overflow-hidden"
+      >
         <video loop autoPlay muted playsInline>
           <source src="/CompressedBurningComputer.mp4" type="video/mp4" />
         </video>
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col lg:col-span-3">
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{ duration: 1 }}
+        className="flex flex-col lg:col-span-3"
+      >
         <div className="text-3xl md:text-4xl xl:text-6xl font-bold mb-10 font-CircularStd">
           About me
         </div>
@@ -40,7 +70,7 @@ function About({ darker }: Props) {
               Two years working in{' '}
               <RoughNotation
                 type="highlight"
-                color={isDarkMode ? "#422c57" : '#ccb1e3'}
+                color={isDarkMode ? '#422c57' : '#ccb1e3'}
                 animate={true}
                 multiline={true}
               >
@@ -49,7 +79,7 @@ function About({ darker }: Props) {
               and{' '}
               <RoughNotation
                 type="highlight"
-                color={isDarkMode ? '#1d4f2d' : "#b1f0c5"}
+                color={isDarkMode ? '#1d4f2d' : '#b1f0c5'}
                 animate={true}
                 multiline={true}
               >
@@ -58,7 +88,7 @@ function About({ darker }: Props) {
               . I am comfortable with{' '}
               <RoughNotation
                 type="highlight"
-                color={isDarkMode ? '#692b3f' : "#f7a3be"}
+                color={isDarkMode ? '#692b3f' : '#f7a3be'}
                 animate={true}
                 multiline={true}
               >
@@ -67,7 +97,7 @@ function About({ darker }: Props) {
               development and
               <RoughNotation
                 type="highlight"
-                color={isDarkMode ? '#614d26' : "#ffe0a1"}
+                color={isDarkMode ? '#614d26' : '#ffe0a1'}
                 animate={true}
                 multiline={true}
               >
@@ -79,7 +109,7 @@ function About({ darker }: Props) {
               As a{' '}
               <RoughNotation
                 type="highlight"
-                color={isDarkMode ? "#422c57" : '#ccb1e3'}
+                color={isDarkMode ? '#422c57' : '#ccb1e3'}
                 animate={true}
                 multiline={true}
               >
@@ -89,7 +119,7 @@ function About({ darker }: Props) {
               technology and{' '}
               <RoughNotation
                 type="highlight"
-                color={isDarkMode ? '#1d4f2d' : "#b1f0c5"}
+                color={isDarkMode ? '#1d4f2d' : '#b1f0c5'}
                 animate={true}
                 multiline={true}
               >
@@ -101,7 +131,7 @@ function About({ darker }: Props) {
               I am currently looking for a{' '}
               <RoughNotation
                 type="underline"
-                color={isDarkMode ? '#692b3f' : "#f7a3be"}
+                color={isDarkMode ? '#692b3f' : '#f7a3be'}
                 animate={true}
                 multiline={true}
               >
@@ -110,7 +140,7 @@ function About({ darker }: Props) {
               developer role.{' '}
               <RoughNotation
                 type="circle"
-                color={isDarkMode ? '#3B82F6' : "#F7AB0A"}
+                color={isDarkMode ? '#3B82F6' : '#F7AB0A'}
                 strokeWidth={2}
                 padding={12}
                 animate={true}
@@ -121,7 +151,7 @@ function About({ darker }: Props) {
             </span>
           </div>
         </RoughNotationGroup>
-      </div>
+      </motion.div>
     </div>
   );
 }
