@@ -163,7 +163,7 @@ function Project({
         <h1 className="text-2xl md:text-4xl font-medium group-hover:border-b-2 w-fit dark:border-brand-blue/50 border-brand-yellow/50">
           {title}
         </h1>
-        <span className="text-[#A6A6A6] dark:text-gray-700 text-[20px] md:text-[24px] font-medium">
+        <span className="text-[#A6A6A6] dark:text-gray-400 text-[20px] md:text-[24px] font-medium">
           {projectType}
         </span>
         <p className="text-[20px] md:text-[24px]  font-LeagueSpartan ">

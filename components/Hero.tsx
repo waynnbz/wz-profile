@@ -79,8 +79,8 @@ function Hero({ darker }: Props) {
         50vw"
         alt="web3 coder png"
         className="origin-bottom-right object-contain md:object-cover object-top overflow-visible w-3/5 min-w-[238px] sm:w-2/5 h-3/5"
-        initial={{ x: isMobile ? 0 : 500 }}
-        whileInView={{ x: 0 }}
+        initial={{ x: isMobile ? 0 : 500, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
         animate={{
           rotate: [0, 3, 1, 2, -1, 2, 0],
         }}
@@ -91,6 +91,7 @@ function Hero({ darker }: Props) {
           scale: { duration: 0.4 },
           x: { duration: 1 },
           y: { duration: 1 },
+          opacity: { duration: 1 },
         }}
         // drag={isMobile ? false : true}
         // // drag
