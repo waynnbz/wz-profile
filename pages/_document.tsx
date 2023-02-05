@@ -50,13 +50,12 @@ export default function Document() {
           rel="preload"
           as="image"
           href="/web3Coder-lg.png"
-          imageSrcSet="/web3Coder-sm.png 400w, 
-        /web3Coder-md.png 800w, 
-        /web3Coder-lg.png 1200w"
-          imageSizes="(max-width: 400px) 100vw, 
-          (max-width: 800px) 50vw, 
-          (max-width: 1200px) 33.3vw, 
-          1200px"
+          imageSrcSet="/web3Coder-sm.png 480w, 
+        /web3Coder-md.png 960w, 
+        /web3Coder-lg.png 1340w"
+          imageSizes="(min-width: 767px) 100vw, 
+          (max-width: 991px) 50vw, 
+          50vw"
         />
 
         <link
