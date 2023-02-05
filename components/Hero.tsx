@@ -55,14 +55,12 @@ function Hero({ darker }: Props) {
         </Link>
       </div>
 
-      <div className="flex relative w-3/5 min-w-[238px] sm:w-2/5 h-3/5">
-        <Image
-          src="/web3Coder.png"
-          alt="web3 coder png"
-          fill
-          className="object-contain md:object-cover object-top overflow-visible"
-        />
-      </div>
+      {/* eslint-disable @next/next/no-img-element */}
+      <img
+        src="/web3Coder.png"
+        alt="web3 coder png"
+        className="object-contain md:object-cover object-top overflow-visible w-3/5 min-w-[238px] sm:w-2/5 h-3/5"
+      />
     </div>
   );
 }
