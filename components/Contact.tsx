@@ -148,7 +148,7 @@ function Contact({ darker }: Props) {
                 opacity: 0,
               }
             : {
-                x: 500,
+                x: 200,
               }
         }
         whileInView={{

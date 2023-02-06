@@ -34,7 +34,7 @@ function About({ darker }: Props) {
                 x: 0,
               }
             : {
-                x: -500,
+                x: -200,
               }
         }
         whileInView={{
