@@ -10,7 +10,7 @@ type Props = {
 
 function Hero({ darker }: Props) {
   const { width } = useWindowSize();
-  const isMobile = width < 1200;
+  const isMobile = width < 1100;
 
   return (
     <div
@@ -79,8 +79,8 @@ function Hero({ darker }: Props) {
         50vw"
         alt="web3 coder png"
         className="origin-bottom-right object-contain md:object-cover object-top overflow-visible w-3/5 min-w-[238px] sm:w-2/5 h-3/5"
-        initial={{ x: isMobile ? 0 : 500, opacity: 0 }}
-        whileInView={{ x: 0, opacity: 1 }}
+        initial={{ x: isMobile ? 0 : 400 }}
+        whileInView={{ x: 0 }}
         animate={{
           rotate: [0, 3, 1, 2, -1, 2, 0],
         }}
@@ -96,10 +96,10 @@ function Hero({ darker }: Props) {
         // drag={isMobile ? false : true}
         // // drag
         // dragConstraints={{
-        //   top: isMobile ? -50 : -200,
-        //   left: isMobile ? -50 : -200,
-        //   right: isMobile ? 50 : 200,
-        //   bottom: isMobile ? 50 : 200,
+        //   top: -100,
+        //   left: -100,
+        //   right: 100,
+        //   bottom: 100,
         // }}
         // whileTap={{
         //   scale: 0.8,

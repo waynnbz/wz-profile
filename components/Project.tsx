@@ -40,7 +40,7 @@ function Project({
       ${id % 2 != 0 && 'lg:mt-32'} group
       `}
       initial={{
-        x: (id % 2 === 0 ? -500 : 500) / (isMobile ? 10 : 1),
+        x: (id % 2 === 0 ? -100 : 100) / (isMobile ? 4 : 1),
         opacity: 0,
       }}
       whileInView={{
