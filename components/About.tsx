@@ -66,7 +66,18 @@ function About({ darker }: Props) {
         </div>
         <RoughNotationGroup show={inView}>
           <div className="flex flex-col gap-8 text-xl md:text-2xl xl:text-3xl font-LeagueSpartan">
-            <span>I love building solutions that help people.</span>
+            <span>
+              I believe in the power of{' '}
+              <RoughNotation
+                type="highlight"
+                color={isDarkMode ? '#692b3f' : '#f7a3be'}
+                animate={true}
+                multiline={true}
+              >
+                storytelling
+              </RoughNotation>
+              .
+            </span>
             <span>
               Two years working in{' '}
               <RoughNotation
@@ -84,18 +95,28 @@ function About({ darker }: Props) {
                 animate={true}
                 multiline={true}
               >
-                Product Ops
+                Data Engineering
               </RoughNotation>
-              . I am comfortable with{' '}
+              . I have the{' '}
               <RoughNotation
                 type="highlight"
-                color={isDarkMode ? '#692b3f' : '#f7a3be'}
+                color={isDarkMode ? '#1d4f2d' : '#b1f0c5'}
+                animate={true}
+                multiline={true}
+              >
+                analytical
+              </RoughNotation>{' '}
+              knowledge to understand data and the frontend skillset to share
+              the story. I am comfortable with{' '}
+              <RoughNotation
+                type="highlight"
+                color={isDarkMode ? '#614d26' : '#ffe0a1'}
                 animate={true}
                 multiline={true}
               >
                 Agile/Scrum
               </RoughNotation>{' '}
-              development and
+              development and{' '}
               <RoughNotation
                 type="highlight"
                 color={isDarkMode ? '#614d26' : '#ffe0a1'}
