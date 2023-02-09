@@ -65,18 +65,18 @@ function About({ darker }: Props) {
           About me
         </div>
         <RoughNotationGroup show={inView}>
-          <div className="flex flex-col gap-8 text-xl md:text-2xl xl:text-3xl font-LeagueSpartan">
+          <div className="flex flex-col gap-8 text-xl md:text-2xl xl:text-2xl font-LeagueSpartan">
             <span>
-              I believe in the power of{' '}
+              I believe{' '}
               <RoughNotation
                 type="highlight"
                 color={isDarkMode ? '#692b3f' : '#f7a3be'}
                 animate={true}
                 multiline={true}
               >
-                storytelling
-              </RoughNotation>
-              .
+                details
+              </RoughNotation>{' '}
+              make the difference in storytelling.
             </span>
             <span>
               Two years working in{' '}
@@ -106,8 +106,8 @@ function About({ darker }: Props) {
               >
                 analytical
               </RoughNotation>{' '}
-              knowledge to understand data and the frontend skillset to share
-              the story. I am comfortable with{' '}
+              knowledge to understand data and the frontend & backend skillset to
+              share the story. I am comfortable with{' '}
               <RoughNotation
                 type="highlight"
                 color={isDarkMode ? '#614d26' : '#ffe0a1'}
@@ -136,9 +136,9 @@ function About({ darker }: Props) {
                 multiline={true}
               >
                 lifetime learner
-              </RoughNotation>{' '}
-              I tackle challenges and find practical solutions. I balance
-              technology and{' '}
+              </RoughNotation>
+              , I embrace challenges and strive to continuously expand my
+              knowledge and skills. I balance technology and{' '}
               <RoughNotation
                 type="highlight"
                 color={isDarkMode ? '#1d4f2d' : '#b1f0c5'}
@@ -160,6 +160,7 @@ function About({ darker }: Props) {
                 Singapore-based
               </RoughNotation>{' '}
               developer role.{' '}
+              <br/>
               <RoughNotation
                 type="circle"
                 color={isDarkMode ? '#3B82F6' : '#F7AB0A'}
