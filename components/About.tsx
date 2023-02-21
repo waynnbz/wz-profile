@@ -61,7 +61,7 @@ function About({ darker }: Props) {
         transition={{ duration: 1 }}
         className="flex flex-col lg:col-span-3"
       >
-        <div className="text-3xl md:text-4xl xl:text-6xl font-bold mb-10 font-CircularStd">
+        <div className="text-3xl md:text-4xl xl:text-6xl font-bold mb-10 font-CircularStd text-center md:text-left">
           About me
         </div>
         <RoughNotationGroup show={inView}>
@@ -106,8 +106,8 @@ function About({ darker }: Props) {
               >
                 analytical
               </RoughNotation>{' '}
-              knowledge to understand data and the frontend & backend skillset to
-              share the story. I am comfortable with{' '}
+              knowledge to understand data and the frontend & backend skillset
+              to share the story. I am proficient in{' '}
               <RoughNotation
                 type="highlight"
                 color={isDarkMode ? '#614d26' : '#ffe0a1'}
@@ -159,8 +159,7 @@ function About({ darker }: Props) {
               >
                 Singapore-based
               </RoughNotation>{' '}
-              developer role.{' '}
-              <br/>
+              developer role. <br />
               <RoughNotation
                 type="circle"
                 color={isDarkMode ? '#3B82F6' : '#F7AB0A'}
